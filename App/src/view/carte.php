@@ -22,7 +22,7 @@
     <a href="router.php?action=UsePage_carte" class="active">Carte</a>
     <a href="#">Données</a>
     <a href="router.php?action=UsePage_apropos">À propos</a>
-    <a href="#">Contact</a>
+    <a href="router.php?action=UsePage_contact">Contact</a>  
   </nav>
 </header>
 
