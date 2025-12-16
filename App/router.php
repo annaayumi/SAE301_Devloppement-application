@@ -5,29 +5,29 @@
 
     // Use page Index
 
-    if($action == 'UsePage_Index'){
-        controller::UsePage('Index.php');
+    if($action == 'UsePage_index'){
+        controller::UsePage('index.php');
     }
 
     // Use page A propos
 
-    if($action == 'UsePage_A_propos'){
-        controller::UsePage('A_propos.php');
+    if($action == 'UsePage_a_propos'){
+        controller::UsePage('a_propos.php');
     }
 
     // Use page Contenu A propos
-    if($action == 'UsePage_Contenu_A_Propos'){
-        controller::UsePage('Contenu_A_propos.php');
+    if($action == 'UsePage_Contenu_a_Propos'){
+        controller::UsePage('Contenu_a_propos.php');
     }
 
     // Use page Contact
-    if($action == 'UsePage_Contact'){
-        controller::UsePage('Contact.php');
+    if($action == 'UsePage_contact'){
+        controller::UsePage('contact.php');
     }
 
     // Use page Carte
-    if($action == 'UsePage_Carte'){
-        controller::UsePage('Carte.php');
+    if($action == 'UsePage_carte'){
+        controller::UsePage('carte.php');
     }
 
 ?>
