@@ -39,10 +39,8 @@
 
 <script>
 const map = L.map('map', {
-  center: [46.5, 2.5],
-  zoom: 6,
-  minZoom: 5,
-  maxZoom: 10,
+  center: [46.5, 2.5], 
+  zoom: 6
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
