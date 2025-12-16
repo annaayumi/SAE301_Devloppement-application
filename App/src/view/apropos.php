@@ -20,7 +20,7 @@
     <a href="router.php?action=UsePage_carte">Carte</a>
     <a href="#">Données</a>
     <a href="router.php?action=UsePage_apropos" class="active">À propos</a>
-    <a href="#">Contact</a>
+    <a href="router.php?action=UsePage_contact">Contact</a>
   </nav>
 </header>
 

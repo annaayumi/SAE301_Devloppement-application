@@ -17,37 +17,35 @@
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index" class="active">Accueil</a>
+    <a href="router.php?action=UsePage_index">Accueil</a>
     <a href="router.php?action=UsePage_carte">Carte</a>
     <a href="#">Données</a>
     <a href="router.php?action=UsePage_apropos">À propos</a>
-    <a href="router.php?action=UsePage_contact">Contact</a>
+    <a href="router.php?action=UsePage_contact" class="active">Contact</a>
   </nav>
 </header>
 
-<!-- SECTION ACCUEIL -->
-<section class="hero">
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <h1>BIENVENUE SUR GLEAUBAL</h1>
-
-    <p>
-      Le changement climatique est un des enjeux majeurs que nous vivons aujourd’hui
-      en affectant les océans, provoquant une hausse des températures, une perturbation
-      de la biodiversité marine mais encore une acidification de l’eau.<br><br>
-
-      Ces phénomènes sont invisibles à l’œil nu mais sont importants à comprendre afin
-      de prévoir les conséquences sur le long terme et si possible éviter le pire.<br><br>
-
-      Notre application permet de visualiser les effets du changement climatique
-      sur les océans à partir de différentes API.
-    </p>
-  </div>
-
-<a href="router.php?action=UsePage_carte" class="boutonScroll" aria-label="Accéder à la carte">
-  →
-</a>
+    <main>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+            </div>
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message"></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
 
 <footer class="footer">
   <!-- lien github -->
@@ -103,23 +101,6 @@
 <div class="copyright">
   © 2025-2026 Tous droits réservés | Mentions légales
 </div>
-
-<!-- pour cacher le header lorsqu'on scroll !-->
-<script>
-let lastScrollY = window.scrollY;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY && window.scrollY > 80) {
-    // scroll vers le bas
-    header.classList.add('hide');
-  } else {
-    // scroll vers le haut
-    header.classList.remove('hide');
-  }
-  lastScrollY = window.scrollY;
-});
-</script>
 
 </body>
 </html>
