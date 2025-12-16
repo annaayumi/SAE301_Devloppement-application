@@ -1,5 +1,5 @@
 <?php
-    require_once 'controller.php';
+    require_once '../src/Controller/controller.php';
 
     $action = $_GET['action'];
 
