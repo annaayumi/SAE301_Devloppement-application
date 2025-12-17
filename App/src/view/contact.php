@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Accueil</title>
+<title>Contact</title>
 
-<link rel="stylesheet" href="../assets/css/index.css">
+<link rel="stylesheet" href="../assets/css/contact.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -27,22 +27,25 @@
 
     <main>
         <form action="#" method="post">
-            <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
-            </div>
-            <div class="form-group">
-                <label for="telephone">Numéro de téléphone</label>
-                <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Votre email">
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Votre message"></textarea>
-            </div>
+<div class="form-group">
+  <input type="text" id="prenom" name="prenom" required>
+  <label for="prenom">Prénom</label>
+</div>
+
+<div class="form-group">
+  <input type="tel" id="telephone" name="telephone" required>
+  <label for="telephone">Numéro de téléphone</label>
+</div>
+
+<div class="form-group">
+  <input type="email" id="email" name="email" required>
+  <label for="email">Email</label>
+</div>
+
+<div class="form-group">
+  <textarea id="message" name="message" required></textarea>
+  <label for="message">Message</label>
+</div>
             <button type="submit">Envoyer</button>
         </form>
     </main>
