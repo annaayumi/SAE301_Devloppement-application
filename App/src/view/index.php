@@ -6,6 +6,11 @@
 
 <link rel="stylesheet" href="../assets/css/index.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,9 +57,7 @@
 <footer class="footer">
   <!-- lien github -->
   <div class="footer-col footer-github">
-    <a href="https://github.com/annaayumi/SAE301_Devloppement-application"
-       target="_blank"
-       aria-label="GitHub GLEAUBAL">
+    <a href="https://github.com/annaayumi/SAE301_Devloppement-application" aria-label="GitHub GLEAUBAL">
        
       <!-- SVG github -->
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"

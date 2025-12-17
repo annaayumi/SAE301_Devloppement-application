@@ -5,9 +5,10 @@
 }
 
 body {
-  font-family: "Abyssinica SIL", serif;
+  font-family: "Open Sans", sans-serif;
   background: black;
   color: white;
+
 }
 
 .header {
@@ -101,7 +102,7 @@ body {
   	background-color: #ded44d;
     align-items: center;
     position: absolute;
-    bottom: 80px;
+    bottom: 180px;
     left: 50%;
     transform: translateX(-50%);
     width: 70px;
@@ -195,12 +196,16 @@ button:hover {
   }
 }
 
+
+
 .footer {
   background: #274242;
   display: grid;
   grid-template-columns: 1.3fr 1fr 1.3fr 1.3fr;
   gap: 50px;
   padding: 40px 80px;
+  position: relative;
+  bottom: -270px;
   font-size: 14px;
   color: white;
 }
@@ -243,6 +248,8 @@ button:hover {
   padding: 12px;
   font-size: 13px;
   color: white;
+  position: relative;
+  bottom: -270px;
 }
 
 /* RESPONSIVE */
