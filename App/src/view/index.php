@@ -51,7 +51,9 @@
 <footer class="footer">
   <!-- lien github -->
   <div class="footer-col footer-github">
-    <a href="https://github.com/annaayumi/SAE301_Devloppement-application" aria-label="GitHub GLEAUBAL">
+    <a href="https://github.com/annaayumi/SAE301_Developpement-application"
+       target="_blank"
+       aria-label="GitHub GLEAUBAL">
        
       <!-- SVG github -->
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"

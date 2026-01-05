@@ -28,7 +28,7 @@
 <footer class="footer">
   <!-- lien github -->
   <div class="footer-col footer-github">
-    <a href="https://github.com/annaayumi/SAE301_Devloppement-application"
+    <a href="https://github.com/annaayumi/SAE301_Developpement-application"
        target="_blank"
        aria-label="GitHub GLEAUBAL">
        
