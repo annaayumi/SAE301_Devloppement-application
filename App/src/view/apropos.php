@@ -11,15 +11,17 @@
 <body>
 <header class="header">
   <div class="left">
+    <a href="router.php?action=UsePage_apropos&lang=English">
     🌐 <span>EN</span>
+    </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index">Accueil</a>
-    <a href="router.php?action=UsePage_carte">Carte</a>
-    <a href="router.php?action=UsePage_donnees">Données</a>
-    <a href="router.php?action=UsePage_apropos" class="active">À propos</a>
-    <a href="router.php?action=UsePage_contact">Contact</a>
+    <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
+    <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
+    <a href="router.php?action=UsePage_donnees&lang=Francais">Données</a>
+    <a href="router.php?action=UsePage_apropos&lang=Francais" class="active">À propos</a>
+    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
 </header>
 
@@ -30,7 +32,7 @@
 
     <div class="card">
       <p>Les principaux phénomènes liés au réchauffement climatique</p>
-      <a href="router.php?action=UsePage_phenomenes" class="arrow">→</a>
+      <a href="router.php?action=UsePage_phenomenes&lang=Francais" class="arrow">→</a>
 
     </div>
 

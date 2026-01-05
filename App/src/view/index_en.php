@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Données</title>
+<title>Accueil</title>
 
-<link rel="stylesheet" href="../assets/css/donnees.css">
+<link rel="stylesheet" href="../assets/css/index.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 <!-- HEADER -->
 <header class="header">
-<div class="left">
-    <a href="router.php?action=UsePage_donnees&lang=English">
-    🌐 <span>EN</span>
+  <div class="left">
+    <a href="router.php?action=UsePage_index&lang=Francais">
+    🌐 <span>FR</span>
     </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
-    <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais"class="active">Données</a>
-    <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
-    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
+    <a href="router.php?action=UsePage_index&lang=English" class="active">Welcome</a>
+    <a href="router.php?action=UsePage_carte&lang=English">Map</a>
+    <a href="router.php?action=UsePage_donnees&lang=English">Data</a>
+    <a href="router.php?action=UsePage_apropos&lang=English">About</a>
+    <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
 </header>
 
+<!-- SECTION ACCUEIL -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>BIENVENUE SUR GLEAUBAL</h1>
+
+    <p>
+      Le changement climatique est un des enjeux majeurs que nous vivons aujourd’hui
+      en affectant les océans, provoquant une hausse des températures, une perturbation
+      de la biodiversité marine mais encore une acidification de l’eau.<br><br>
+
+      Ces phénomènes sont invisibles à l’œil nu mais sont importants à comprendre afin
+      de prévoir les conséquences sur le long terme et si possible éviter le pire.<br><br>
+
+      Notre application permet de visualiser les effets du changement climatique
+      sur les océans à partir de différentes API.
+    </p>
+  </div>
+
+<a href="router.php?action=UsePage_carte&lang=English" class="boutonScroll" aria-label="Accéder à la carte">
+  →
+</a>
 
 <footer class="footer">
   <!-- lien github -->
@@ -81,6 +104,23 @@
 <div class="copyright">
   © 2025-2026 Tous droits réservés | Mentions légales
 </div>
+
+<!-- pour cacher le header lorsqu'on scroll !-->
+<script>
+let lastScrollY = window.scrollY;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY && window.scrollY > 80) {
+    // scroll vers le bas
+    header.classList.add('hide');
+  } else {
+    // scroll vers le haut
+    header.classList.remove('hide');
+  }
+  lastScrollY = window.scrollY;
+});
+</script>
 
 </body>
 </html>

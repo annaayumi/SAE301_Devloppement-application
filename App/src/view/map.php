@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Carte</title>
+<title>Accueil</title>
 
 <link rel="stylesheet" href="../assets/css/carte.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -13,19 +13,20 @@
 <!-- HEADER -->
 <header class="header">
   <div class="left">
-    <a href="router.php?action=UsePage_carte&lang=English">
-    🌐 <span>EN</span>
+    <a href="router.php?action=UsePage_carte&lang=Francais">
+    🌐 <span>FR</span>
     </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
-    <a href="router.php?action=UsePage_carte&lang=Francais" class="active">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais">Données</a>
-    <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
-    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>  
+    <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
+    <a href="router.php?action=UsePage_carte&lang=English" class="active">Map</a>
+    <a href="router.php?action=UsePage_donnees&lang=English">Data</a>
+    <a href="router.php?action=UsePage_apropos&lang=English">About</a>
+    <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
 </header>
+
 
 <div id="map"></div>
 

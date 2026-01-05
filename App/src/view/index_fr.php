@@ -12,15 +12,17 @@
 <!-- HEADER -->
 <header class="header">
   <div class="left">
+    <a href="router.php?action=UsePage_carte&lang=English">
     🌐 <span>EN</span>
+    </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index" class="active">Accueil</a>
-    <a href="router.php?action=UsePage_carte">Carte</a>
-    <a href="router.php?action=UsePage_donnees">Données</a>
-    <a href="router.php?action=UsePage_apropos">À propos</a>
-    <a href="router.php?action=UsePage_contact">Contact</a>
+    <a href="router.php?action=UsePage_index&lang=Francais" class="active">Accueil</a>
+    <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
+    <a href="router.php?action=UsePage_donnees&lang=Francais">Données</a>
+    <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
+    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
 </header>
 
@@ -44,7 +46,7 @@
     </p>
   </div>
 
-<a href="router.php?action=UsePage_carte" class="boutonScroll" aria-label="Accéder à la carte">
+<a href="router.php?action=UsePage_carte&lang=Francais" class="boutonScroll" aria-label="Accéder à la carte">
   →
 </a>
 

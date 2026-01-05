@@ -1,31 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Données</title>
+<title>Contact</title>
 
-<link rel="stylesheet" href="../assets/css/donnees.css">
+<link rel="stylesheet" href="../assets/css/contact.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 <!-- HEADER -->
 <header class="header">
-<div class="left">
-    <a href="router.php?action=UsePage_donnees&lang=English">
+  <div class="left">
+  <a href="router.php?action=UsePage_contact&lang=English">
     🌐 <span>EN</span>
-    </a>
+  </a>
   </div>
 
   <nav class="nav">
     <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
     <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais"class="active">Données</a>
+    <a href="router.php?action=UsePage_donnees&lang=Francais">Données</a>
     <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
-    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
+    <a href="router.php?action=UsePage_contact&lang=Francais" class="active">Contact</a>
   </nav>
 </header>
 
+<main>
+  <form action="" method="post">
+
+<div class="form-group">
+  <input type="text" id="prenom" name="prenom" required>
+  <label for="prenom">Prénom</label>
+</div>
+
+<div class="form-group">
+  <input type="tel" id="telephone" name="telephone" required>
+  <label for="telephone">Numéro de téléphone</label>
+</div>
+
+<div class="form-group">
+  <input type="email" id="email" name="email" required>
+  <label for="email">Email</label>
+</div>
+
+<div class="form-group">
+  <textarea id="message" name="message" required></textarea>
+  <label for="message">Message</label>
+</div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
 
 <footer class="footer">
   <!-- lien github -->

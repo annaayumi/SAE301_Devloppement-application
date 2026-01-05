@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact</title>
+<title>Accueil</title>
 
-<link rel="stylesheet" href="../assets/css/contact.css">
+<link rel="stylesheet" href="../assets/css/apropos.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -12,45 +12,47 @@
 <!-- HEADER -->
 <header class="header">
   <div class="left">
-    🌐 <span>EN</span>
+    <a href="router.php?action=UsePage_apropos&lang=Francais">
+    🌐 <span>FR</span>
+    </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index">Accueil</a>
-    <a href="router.php?action=UsePage_carte">Carte</a>
-    <a href="router.php?action=UsePage_donnees">Données</a>
-    <a href="router.php?action=UsePage_apropos">À propos</a>
-    <a href="router.php?action=UsePage_contact" class="active">Contact</a>
+    <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
+    <a href="router.php?action=UsePage_carte&lang=English">Map</a>
+    <a href="router.php?action=UsePage_donnees&lang=English">Data</a>
+    <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
+    <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
 </header>
 
-<main>
-  <form action="" method="post">
 
-<div class="form-group">
-  <input type="text" id="prenom" name="prenom" required>
-  <label for="prenom">Prénom</label>
-</div>
+<!-- CONTENU -->
+<section class="apropos">
 
-<div class="form-group">
-  <input type="tel" id="telephone" name="telephone" required>
-  <label for="telephone">Numéro de téléphone</label>
-</div>
+  <div class="cards">
 
-<div class="form-group">
-  <input type="email" id="email" name="email" required>
-  <label for="email">Email</label>
-</div>
+    <div class="card">
+      <p>Les principaux phénomènes liés au réchauffement climatique</p>
+      <a href="router.php?action=UsePage_phenomenes&lang=English" class="arrow">→</a>
 
-<div class="form-group">
-  <textarea id="message" name="message" required></textarea>
-  <label for="message">Message</label>
-</div>
-            <button type="submit">Envoyer</button>
-        </form>
-    </main>
+    </div>
 
+    <div class="card">
+      <p>Les différentes sources de données scientifiques et ses formats proposés</p>
+      <span class="arrow">→</span>
+    </div>
+
+    <div class="card">
+      <p>Notre missions et les objectifs que nous nous sommes fixés dans ce projet</p>
+      <span class="arrow">→</span>
+    </div>
+
+  </div>
+
+</section>
 <footer class="footer">
+
   <!-- lien github -->
   <div class="footer-col footer-github">
     <a href="https://github.com/annaayumi/SAE301_Developpement-application"
@@ -104,6 +106,23 @@
 <div class="copyright">
   © 2025-2026 Tous droits réservés | Mentions légales
 </div>
+
+<!-- pour cacher le header lorsqu'on scroll !-->
+<script>
+let lastScrollY = window.scrollY;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY && window.scrollY > 80) {
+    // scroll vers le bas
+    header.classList.add('hide');
+  } else {
+    // scroll vers le haut
+    header.classList.remove('hide');
+  }
+  lastScrollY = window.scrollY;
+});
+</script>
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Données</title>
+<title>Accueil</title>
 
 <link rel="stylesheet" href="../assets/css/donnees.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +11,21 @@
 <body>
 <!-- HEADER -->
 <header class="header">
-<div class="left">
-    <a href="router.php?action=UsePage_donnees&lang=English">
-    🌐 <span>EN</span>
+  <div class="left">
+    <a href="router.php?action=UsePage_donnees&lang=Francais">
+    🌐 <span>FR</span>
     </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
-    <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais"class="active">Données</a>
-    <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
-    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
+    <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
+    <a href="router.php?action=UsePage_carte&lang=English">Map</a>
+    <a href="router.php?action=UsePage_donnees&lang=English" class="active">Data</a>
+    <a href="router.php?action=UsePage_apropos&lang=English">About</a>
+    <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
 </header>
+
 
 
 <footer class="footer">
