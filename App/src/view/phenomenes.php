@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 <header class="header">
   <div class="left">
     🌐 <span>EN</span>
@@ -18,7 +17,7 @@
   <nav class="nav">
     <a href="router.php?action=UsePage_index">Accueil</a>
     <a href="router.php?action=UsePage_carte">Carte</a>
-    <a href="#">Données</a>
+    <a href="router.php?action=UsePage_donnees">Données</a>
     <a href="router.php?action=UsePage_apropos" class="active">À propos</a>
     <a href="router.php?action=UsePage_contact">Contact</a>
   </nav>
