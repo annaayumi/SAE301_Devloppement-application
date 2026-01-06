@@ -29,6 +29,11 @@ body {
   font-size: 20px;
 }
 
+.left a:link, .left a:visited, .left a:hover, .left a:active {
+  color: white;
+  text-decoration: none;
+}
+
 .nav {
   margin-left: auto;
   display: flex;

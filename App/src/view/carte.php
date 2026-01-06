@@ -32,6 +32,7 @@
 <aside class="filters">
   <div class="filters-title">Filtres</div>
   <button>Période</button>
+  
   <button>Type de mesure</button>
   <button>Type de plateforme</button>
 </aside>
