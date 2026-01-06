@@ -40,6 +40,11 @@ body {
   font-size: 20px;
 }
 
+.left a:link, .left a:visited, .left a:hover, .left a:active {
+  color: white;
+  text-decoration: none;
+}
+
 .nav {
   margin-left: auto;
   display: flex;
@@ -109,6 +114,15 @@ body {
   padding: 40px 80px;
   font-size: 14px;
   color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  opacity: 0.8;
 }
 
 .footer-col {
