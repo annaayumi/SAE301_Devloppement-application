@@ -33,18 +33,18 @@
   <div class="cards">
 
     <div class="card">
-      <p>Les principaux phénomènes liés au réchauffement climatique</p>
+      <p>The main phenomenon linked to global warming</p>
       <a href="router.php?action=UsePage_phenomenes&lang=English" class="arrow">→</a>
 
     </div>
 
     <div class="card">
-      <p>Les différentes sources de données scientifiques et ses formats proposés</p>
+      <p>The different sources of scientific data and their proposed format</p>
       <span class="arrow">→</span>
     </div>
 
     <div class="card">
-      <p>Notre missions et les objectifs que nous nous sommes fixés dans ce projet</p>
+      <p>Our missions and goals we have set for ourselves in this project</p>
       <span class="arrow">→</span>
     </div>
 
@@ -68,7 +68,7 @@
 
     <div>
       <strong>GitHub</strong><br>
-      Adresse : 122 Rue Paul Armangot,<br>
+      Address : 122 Rue Paul Armangot,<br>
       94400 Vitry-sur-Seine
     </div>
   </div>
@@ -83,7 +83,7 @@
 
   <!-- Membres -->
   <div class="footer-col">
-    <strong>Membres de l’équipe</strong><br>
+    <strong>Members of the team</strong><br>
     CHEREF Rayane<br>
     FALCONNET BANEYX Simon<br>
     MARDAUS Patrick<br>
