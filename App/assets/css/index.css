@@ -103,8 +103,8 @@ body {
 }
 
 .hero-content p {
-  font-size: clamp(14px, 1.1vw, 18px);
-  font-weight: 400;
+  font-size: clamp(16px, 1.1vw, 20px);
+  font-weight: 500;
   line-height: 1.6;
   max-width: 900px;
   margin: 0 auto;
@@ -138,11 +138,10 @@ body {
 
 /* page contenu accueil */
 .impact {
-  background: rgb(13, 13, 13);
+  background: rgb(29, 36, 38);
   color: #f3f3f3;
   padding: 120px 60px;
   text-align: center;
-  margin-top: 80px; 
 }
 
 .impact h2 {
@@ -176,7 +175,7 @@ body {
 
 .carte {
   color : #f3f3f3;
-  background: #3fc9c0b0;
+  background: #42a8a1c5;
   padding: 35px;
   border-radius: 18px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
