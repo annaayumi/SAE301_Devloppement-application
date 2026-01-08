@@ -39,9 +39,13 @@ body {
   font-size: 20px;
 }
 
-.left a:link, .left a:visited, .left a:hover, .left a:active {
+.left a:link, .left a:visited, .left a:active {
   color: white;
   text-decoration: none;
+}
+
+.left a:hover {
+  color: rgba(255,255,255,0.75);
 }
 
 .nav {
@@ -52,14 +56,14 @@ body {
 
 .nav a {
   position: relative;
-  color: rgba(255,255,255,0.75);
+  color: white;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.25s ease;
 }
 
 .nav a:hover {
-  color: white;
+  color: rgba(255,255,255,0.75);
 }
 
 #map {
