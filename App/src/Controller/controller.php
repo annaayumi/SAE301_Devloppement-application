@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Gleaubal\Controller;
-
 class Controller {
 
 
