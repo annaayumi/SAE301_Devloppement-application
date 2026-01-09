@@ -24,6 +24,13 @@
     <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
     <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
 </header>
 
 <!-- SECTION ACCUEIL -->
@@ -45,11 +52,10 @@
       sur les océans à partir de différentes API.
     </p>
   </div>
-
+</section>
 <a href="router.php?action=UsePage_carte&lang=Francais" class="boutonScroll" aria-label="Accéder à la carte">
   →
 </a>
-</section>
 
 <!-- CONTENU PAGE ACCUEIL !-->
 <section class="impact">
