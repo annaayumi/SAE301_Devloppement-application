@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 09 jan. 2026 à 17:29
+-- Généré le : lun. 12 jan. 2026 à 09:49
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -1209,12 +1209,16 @@ INSERT INTO `plateforme` (`id`, `id_type`) VALUES
 ('9901396', 9),
 ('9901520', 9),
 ('9901522', 9),
+('EXMY1828', 11),
 ('EXMY1828_35', 11),
 ('EXMY1836_35', 11),
 ('EXMY1837_35', 11),
 ('EXMY1914_35', 11),
+('EXMY1915', 11),
 ('EXMY1915_35', 11),
+('EXMY2017', 11),
 ('EXMY2017_35', 11),
+('EXMY2024', 11),
 ('EXMY2024_35', 11),
 ('EXMY2607_35', 11),
 ('2FRXYUC', 12),
@@ -2085,7 +2089,9 @@ CREATE TABLE IF NOT EXISTS `releves` (
   `longitude` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `date` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `valeur` float NOT NULL,
-  PRIMARY KEY (`id_releve`)
+  PRIMARY KEY (`id_releve`),
+  KEY `id_mesure` (`id_mesure`),
+  KEY `id_plateforme` (`id_plateforme`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33189 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -35363,7 +35369,14 @@ INSERT INTO `type_plateforme` (`id_type`, `type`, `desc`) VALUES
 -- Contraintes pour la table `plateforme`
 --
 ALTER TABLE `plateforme`
-  ADD CONSTRAINT `plateforme_ibfk_1` FOREIGN KEY (`id_type`) REFERENCES `type_plateforme` (`id_type`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `plateforme_ibfk_1` FOREIGN KEY (`id_type`) REFERENCES `type_plateforme` (`id_type`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `releves`
+--
+ALTER TABLE `releves`
+  ADD CONSTRAINT `releves_ibfk_1` FOREIGN KEY (`id_mesure`) REFERENCES `mesure` (`id_mesure`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  ADD CONSTRAINT `releves_ibfk_2` FOREIGN KEY (`id_plateforme`) REFERENCES `plateforme` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
