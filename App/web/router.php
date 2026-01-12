@@ -1,6 +1,6 @@
 <?php
-    namespace App\Gleaubal\Web;
-    use App\Gleaubal\Controller\Controller as Controller;
+    
+    require_once '../src/Controller/controller.php';
 
     $action = $_GET['action'] ?? 'UsePage_index';
     $lang = $_GET['lang'] ?? 'Francais';
@@ -51,16 +51,4 @@
         if($lang == "Francais"){Controller::UsePage('donnees.php');}
         if($lang == "English"){Controller::UsePage('data.php');}
     }
-
-<<<<<<< HEAD
-    // Use page phenomenes
-
-    if($action == 'UsePage_phenomenes'){
-        if($lang == "Francais"){Controller::UsePage('phenomenes.php');}
-        if($lang == "English"){Controller::UsePage('phenomenon.php');}
-    }
-
-
-=======
->>>>>>> f3595f04db08990eb7a35c03d4a9de21c927f256
 ?>

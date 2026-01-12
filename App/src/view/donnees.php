@@ -24,6 +24,7 @@
     <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
     <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
+  
 </header>
 
 

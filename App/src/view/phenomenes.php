@@ -23,7 +23,14 @@
     <a href="router.php?action=UsePage_apropos&lang=Francais" class="active">À propos</a>
     <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
+
 <main class="content-page">
 
   <section class="content-hero">

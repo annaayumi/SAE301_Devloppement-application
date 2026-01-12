@@ -24,6 +24,12 @@
     <a href="router.php?action=UsePage_apropos&lang=English">About</a>
     <a href="router.php?action=UsePage_contact&lang=English" class="active">Contact</a>
   </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 
@@ -101,8 +107,6 @@
     ulrich.ousseni-combo@etu.u-pec.fr<br>
     anna.zheng@etu.u-pec.fr
   </div>
-
-
 
 </footer>
 

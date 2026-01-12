@@ -24,6 +24,12 @@
     <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
     <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 <!-- SECTION ACCUEIL -->
@@ -45,11 +51,10 @@
       sur les océans à partir de différentes API.
     </p>
   </div>
-
+</section>
 <a href="router.php?action=UsePage_carte&lang=Francais" class="boutonScroll" aria-label="Accéder à la carte">
   →
 </a>
-</section>
 
 <!-- CONTENU PAGE ACCUEIL !-->
 <section class="impact">
@@ -147,7 +152,7 @@
   © Gleaubal 2025-2026 Tous droits réservés | Mentions légales
 </div>
 
-<!-- animations javascript -->
+<!-- animations javascript pour les cartes info -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -193,6 +198,22 @@ document.addEventListener("DOMContentLoaded", () => {
   checkScroll(); // au cas où déjà visible
 });
 </script>
+
+<script>
+const burger = document.getElementById("burger");
+const nav = document.querySelector(".nav");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
+</script>
+
 
 </body>
 </html>

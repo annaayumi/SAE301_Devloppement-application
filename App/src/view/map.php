@@ -25,6 +25,12 @@
     <a href="router.php?action=UsePage_apropos&lang=English">About</a>
     <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 

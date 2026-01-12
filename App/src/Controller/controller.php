@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Gleaubal\Controller;
 
-class Controller {
+class controller{
 
 
     public static function UsePage(string $Vue) : void {
@@ -10,10 +9,7 @@ class Controller {
     }
 
     public static function ChangeLang(string $lang) : void {
-        require dirname(__DIR__)."/view/$Vue";// Charge la vue 
+        require dirname(__DIR__)."/view/$lang";// Charge la vue 
     }
-    
-     
 }
-
 ?>

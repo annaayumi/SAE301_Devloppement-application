@@ -31,10 +31,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.hero-content {
-  padding: 160px 40px 0;
-}
-
 .left {
   font-size: 20px;
 }
@@ -63,6 +59,10 @@ body {
 }
 
 .nav a:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+.nav a.active {
   color: rgba(255,255,255,0.75);
 }
 
@@ -126,18 +126,4 @@ body {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .footer {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .footer-github {
-    justify-content: center;
-  }
 }

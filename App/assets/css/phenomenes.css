@@ -60,6 +60,10 @@ body {
   color: rgba(255,255,255,0.75);
 }
 
+.nav a.active {
+  color: rgba(255,255,255,0.75);
+}
+
 .content-page {
   min-height: 100vh;
   padding: 160px 20px 100px;
@@ -171,4 +175,53 @@ body {
   padding: 12px;
   font-size: 13px;
   color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* menu */
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .burger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  .burger {
+    z-index: 3000;
+  }
+
+  .nav {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 220px;
+    height: calc(100vh - 80px);
+    background: rgba(0,0,0,0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px;
+    gap: 25px;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
 }

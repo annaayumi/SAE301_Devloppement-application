@@ -45,13 +45,10 @@
       on the oceans using various APIs.
     </p>
   </div>
-
+</section>
   <a href="router.php?action=UsePage_carte&lang=English" class="boutonScroll" aria-label="Accéder à la carte">
     →
   </a>
-</section>
-
-
 
 <!-- CONTENU PAGE ACCUEIL !-->
 <section class="impact">

@@ -31,11 +31,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* pour cacher le header */
-.header.hide {
-  transform: translateY(-100%);
-}
-
 .left {
   font-size: 20px;
 }
@@ -64,6 +59,10 @@ body {
 }
 
 .nav a:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+.nav a.active {
   color: rgba(255,255,255,0.75);
 }
 
@@ -224,31 +223,4 @@ form {
   padding: 12px;
   font-size: 13px;
   color: white;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .footer {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .footer-github {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 900px) {
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
 }

@@ -24,6 +24,12 @@
     <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
     <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 
@@ -106,23 +112,6 @@
 <div class="copyright">
   © Gleaubal 2025-2026 All rights reserved | Legal mentions
 </div>
-
-<!-- pour cacher le header lorsqu'on scroll !-->
-<script>
-let lastScrollY = window.scrollY;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY && window.scrollY > 80) {
-    // scroll vers le bas
-    header.classList.add('hide');
-  } else {
-    // scroll vers le haut
-    header.classList.remove('hide');
-  }
-  lastScrollY = window.scrollY;
-});
-</script>
 
 </body>
 </html>
