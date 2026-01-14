@@ -19,7 +19,6 @@
   <nav class="nav">
     <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
     <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais">Données</a>
     <a href="router.php?action=UsePage_apropos&lang=Francais" class="active">À propos</a>
     <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
   </nav>
@@ -45,12 +44,12 @@
 
     <div class="card">
       <p>Les différentes sources de données scientifiques et ses formats proposés</p>
-      <span class="arrow">→</span>
+      <a href="router.php?action=UsePage_sources&lang=Francais" class="arrow">→</a>
     </div>
 
     <div class="card">
       <p>Notre missions et les objectifs que nous nous sommes fixés dans ce projet</p>
-      <span class="arrow">→</span>
+      <a href="router.php?action=UsePage_missions&lang=Francais" class="arrow">→</a>
     </div>
 
   </div>

@@ -1,36 +1,84 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Données</title>
+<title>Sources</title>
 
-<link rel="stylesheet" href="../assets/css/donnees.css">
+<link rel="stylesheet" href="../assets/css/sources.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 <!-- HEADER -->
 <header class="header">
-<div class="left">
-    <a href="router.php?action=UsePage_donnees&lang=English">
-    🌐 <span>EN</span>
+  <div class="left">
+    <a href="router.php?action=UsePage_apropos&lang=Francais">
+    🌐 <span>FR</span>
     </a>
   </div>
 
   <nav class="nav">
-    <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
-    <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais"class="active">Données</a>
-    <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
-    <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>
+    <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
+    <a href="router.php?action=UsePage_carte&lang=English">Map</a>
+    <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
+    <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
-  
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
+<a href="router.php?action=UsePage_apropos&lang=Francais" class="bouton-retour">
+  ← Back
+</a>
+
+<section class="sources">
+
+  <h1>Sources of scientific data</h1>
+  <p class="intro">
+    The data used in GLEAUBAL comes from various recognized scientific organizations.
+    They allow for analyzing ocean evolution and the impacts of climate change.
+  </p>
+
+    <!-- Copernicus -->
+    <div class="source-card">
+      <h2>Copernicus</h2>
+      <p>
+        European program for Earth observation by satellite.
+        Copernicus has a vision of the entire world thanks to its satellites.
+      </p>
+    </div>
+
+    <!-- Ifremer -->
+    <div class="source-card">
+      <h2>Ifremer</h2>
+      <p>
+        French institute specialized in marine sciences.
+        Ifremer has a limited vision as it mainly extends over France and overseas territories,
+        particularly with its oceans and the marine biodiversity linked to them, but also has
+        international involvement by publishing globally.
+      </p>
+    </div>
+
+    <!-- SeaNoe -->
+    <div class="source-card">
+      <h2>SeaNoe</h2>
+      <p>
+        Open platform for sharing marine scientific data.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
 
-
+</section>
 <footer class="footer">
+
   <!-- lien github -->
   <div class="footer-col footer-github">
     <a href="https://github.com/annaayumi/SAE301_Developpement-application"
@@ -46,7 +94,7 @@
 
     <div>
       <strong>GitHub</strong><br>
-      Adresse : 122 Rue Paul Armangot,<br>
+      Address : 122 Rue Paul Armangot,<br>
       94400 Vitry-sur-Seine
     </div>
   </div>
@@ -61,7 +109,7 @@
 
   <!-- Membres -->
   <div class="footer-col">
-    <strong>Membres de l’équipe</strong><br>
+    <strong>Members of the team</strong><br>
     CHEREF Rayane<br>
     FALCONNET BANEYX Simon<br>
     MARDAUS Patrick<br>
@@ -82,7 +130,7 @@
 </footer>
 
 <div class="copyright">
-  © 2025-2026 Tous droits réservés | Mentions légales
+  © Gleaubal 2025-2026 All rights reserved | Legal mentions
 </div>
 
 </body>

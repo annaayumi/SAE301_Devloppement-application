@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Accueil</title>
+<title>About</title>
 
 <link rel="stylesheet" href="../assets/css/apropos.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,6 @@
   <nav class="nav">
     <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
     <a href="router.php?action=UsePage_carte&lang=English">Map</a>
-    <a href="router.php?action=UsePage_donnees&lang=English">Data</a>
     <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
     <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
@@ -46,12 +45,12 @@
 
     <div class="card">
       <p>The different sources of scientific data and their proposed format</p>
-      <span class="arrow">→</span>
+      <a href="router.php?action=UsePage_sources&lang=English" class="arrow">→</a>
     </div>
 
     <div class="card">
       <p>Our missions and goals we have set for ourselves in this project</p>
-      <span class="arrow">→</span>
+      <a href="router.php?action=UsePage_missions&lang=English" class="arrow">→</a>
     </div>
 
   </div>

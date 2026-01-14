@@ -21,7 +21,6 @@
   <nav class="nav">
     <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
     <a href="router.php?action=UsePage_carte&lang=Francais" class="active">Carte</a>
-    <a href="router.php?action=UsePage_donnees&lang=Francais">Données</a>
     <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
     <a href="router.php?action=UsePage_contact&lang=Francais">Contact</a>  
   </nav>
@@ -41,14 +40,18 @@
 
     <div class="titre">Filtres</div>
 
-    <span>Période</span>
+  <button id="bouton_periode">Période</button>
 
-    <!-- PERIODE -->
-    <div class="periode" id="periode">
-      <span id="annee">2023</span>
-      <input type="range" min="2020" max="2025" name="annee" id="slider">
+  <!-- PERIODE -->
+  <div class="type">Période (Mois / Année)</div>
+  <div class="periode" id="periode">
+    <span id="mois">Juillet</span>
+    <input type="range" min="01" max="12" id="sliderMois" name="mois">
 
-    </div>
+    <span id="annee">2023</span>
+    <input type="range" min="2020" max="2025" id="sliderAnnee" name="annee">
+
+  </div>
 
     <!-- unite DE MESURE -->
     
@@ -63,13 +66,27 @@
       </div>
     </div>
 
-    <!-- TYPE DE PLATEFORME -->
-    <div class="types">
-      <div class="type">Type de plateforme</div>
-      <div class="options">
-        <input type="radio" class="option" name="platforme" value="satellite">Satellite</input>
-        <input type="radio" class="option" name="platforme" value="DB">Bouée</input>
+  <!-- TYPE DE PLATEFORME -->
+  <div class="types">
+    <div class="type">Type de plateforme</div>
+      <span class="help"> ? 
+        <div class="help-popup"> Description ....... 
       </div>
+      </span>
+    <div class="options">
+      <input class="option" name="platforme" value="BO">Boreholes/ Bottom Landers (BO)</input>
+      <input class="option" name="platforme" value="CT">CTD Profiles (CT)</input>
+      <input class="option" name="platforme" value="DB">Drifting Buoys (DB)</input>
+      <input class="option" name="platforme" value="FB">FerryBoxes (FB)</input>
+      <input class="option" name="platforme" value="GL">Gliders (GL)</input>
+      <input class="option" name="platforme" value="ML">Mini-Loggers (ML)</input>
+      <input class="option" name="platforme" value="MO">Fixed Mooring / Moored Buoys (MO)</input>
+      <input class="option" name="platforme" value="PF">Profiling Floats (PF)</input>
+      <input class="option" name="platforme" value="PR">Profiling Floats - Alternative code (PR)</input>
+      <input class="option" name="platforme" value="SD">Saildrones / Surface Drifters (SD)</input>
+      <input class="option" name="platforme" value="TG">Tide Gauges (TG)</input>
+      <input class="option" name="platforme" value="TS">ThermoSalinographs (TS)</input>  
+      <input class="option" name="platforme" value="XB">Expendable Bathythermographs (XB)</input>
     </div>
     
     <input  type="submit" value="Appliquer"></input>
@@ -82,7 +99,6 @@
   </form>
 </aside>
 
-
 <!-- carte -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -92,6 +108,7 @@
 const map = L.map('map', {
   center: [46.5, 2.5], 
   zoom: 6,
+  minZoom: 4
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -124,21 +141,27 @@ echo "</script>";
 
 <!-- FILTRES -->
 <script>
-const btn = document.getElementById("bouton_periode");
-const panel = document.getElementById("periode");
-const slider = document.getElementById("slider");
+const sliderAnnee = document.getElementById("sliderAnnee");
+const sliderMois = document.getElementById("sliderMois");
 const annee = document.getElementById("annee");
+const mois = document.getElementById("mois");
 
-/* ouvrir et fermer */
-btn.addEventListener("click", () => {
-  panel.classList.toggle("active");
+const moisNoms = [
+  "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+  "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+];
+
+/* afficher année */
+sliderAnnee.addEventListener("input", () => {
+  annee.textContent = sliderAnnee.value;
 });
 
-/* permet d'afficher l'année */
-slider.addEventListener("input", () => {
-  annee.textContent = slider.value;
+/* afficher mois */
+sliderMois.addEventListener("input", () => {
+  mois.textContent = moisNoms[sliderMois.value];
 });
 </script>
+
 
 <script>
 const filtres = document.querySelector(".filtres");
@@ -166,6 +189,21 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("mouseup", () => {
   isDragging = false;
   dragBar.style.cursor = "grab";
+});
+</script>
+
+<script>
+const options = document.querySelectorAll(".option");
+
+options.forEach(option => {
+  option.addEventListener("click", () => {
+    option.classList.toggle("active");
+
+    console.log("Sélections actuelles :");
+    document.querySelectorAll(".option.active").forEach(btn => {
+      console.log(btn.dataset);
+    });
+  });
 });
 </script>
 

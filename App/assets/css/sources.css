@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-html{
-  overscroll-behavior: none;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: black;
+  background: rgb(14, 17, 18);
   color: white;
 }
 
@@ -29,6 +29,10 @@ body {
   /* shadow */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease;
+}
+
+.hero-content {
+  padding: 160px 40px 0;
 }
 
 .left {
@@ -66,6 +70,64 @@ body {
   color: rgba(255,255,255,0.75);
 }
 
+.sources {
+  padding: 160px 40px 120px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sources h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.sources .intro {
+  text-align: center;
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto 70px;
+}
+
+.source-card {
+  background: #42a8a1c5;
+  border-radius: 18px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.source-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(90, 123, 131, 0.562);
+}
+
+.source-card h2 {
+  margin-bottom: 10px;
+}
+
+.bouton-retour {
+  position: fixed;
+  top: 100px;
+  left: 30px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: rgba(63, 201, 192, 0.15);
+  color: #3fc9c0;
+  border: 1px solid rgba(63, 201, 192, 0.35);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+  z-index: 900;
+}
+
+.bouton-retour:hover {
+  background: rgba(63, 201, 192, 0.3);
+  transform: translateX(-4px);
+}
+
 .footer {
   background: #274242;
   display: grid;
@@ -93,15 +155,6 @@ body {
   display: inline-block;
   margin-bottom: 8px;
   text-decoration: underline;
-}
-
-footer a {
-    color: white; 
-    text-decoration: underline; 
-}
-
-footer a:hover {
-    color: #ccc; 
 }
 
 /* GitHub */

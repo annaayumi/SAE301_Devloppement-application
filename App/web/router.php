@@ -95,10 +95,23 @@
 
         // Use page donnees
 
-        if($action == 'UsePage_donnees'){
-            if($lang == "Francais"){Controller::UsePage('donnees.php');}
-            if($lang == "English"){Controller::UsePage('data.php');}
-        }
+    if($action == 'UsePage_donnees'){
+        if($lang == "Francais"){Controller::UsePage('donnees.php');}
+        if($lang == "English"){Controller::UsePage('data.php');}
     }
 
+    // Use page Sources de données & formats proposés  
+
+    if($action == 'UsePage_sources'){
+        if($lang == "Francais"){Controller::UsePage('sources_fr.php');}
+        if($lang == "English"){Controller::UsePage('sources_en.php');}
+    }
+
+    // Use page Missions du projet 
+    
+    if($action == 'UsePage_missions'){
+        if($lang == "Francais"){Controller::UsePage('missions_fr.php');}
+        if($lang == "English"){Controller::UsePage('missions_en.php');}
+    }
+}
 ?>
