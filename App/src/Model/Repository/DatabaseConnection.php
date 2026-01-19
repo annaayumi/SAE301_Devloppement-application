@@ -95,13 +95,16 @@ class DatabaseConnection {
         $PdoStatement = DatabaseConnection::getPdo()->prepare($sql);
         
         if ($date != "") { 
-        $PdoStatement->bindParam(':date',$date, PDO::PARAM_STR);}
+            $PdoStatement->bindParam(':date',$date, PDO::PARAM_STR);
+            }
 
         if ($unite != "") { 
-        $PdoStatement->bindParam(':unite',$unite, PDO::PARAM_STR);}
+            $PdoStatement->bindParam(':unite',$unite, PDO::PARAM_STR);
+            }
 
         if ($plateforme != "") { 
-        $PdoStatement->bindParam(':plateforme',$plateforme, PDO::PARAM_STR);}
+            $PdoStatement->bindParam(':plateforme',$plateforme, PDO::PARAM_STR);
+            }
         
 
         // exec

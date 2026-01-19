@@ -45,9 +45,9 @@
     <div class="titre">Filtres</div>
   <!-- PERIODE -->
    
-  <button type="button" class="type" onclick="toggleFilter('periodeHide','periodeButtonCheckbox')">Période (Mois / Année) 
-      <input type="checkbox" id="typeButtonCheckbox" hidden>
-      <input type="checkbox" id="typeButtonCheckbox"checked>
+  <button type="button" class="type" onclick="toggleFilter('periodeHide','periodeButtonCheckbox')">
+    Période (Mois / Année) 
+    <input type="checkbox" id="periodeButtonCheckbox" name="date_checkbox" checked>
   </button>
   <div class="periode" id="periode">
     <span id="periodeHide">
@@ -64,9 +64,9 @@
     
     <div class="types">
       
-      <button type="button"  class="type " onclick="toggleFilter('typeHide','typeButtonCheckbox','')">Type de mesure 
-        <input type="checkbox" id="typeButtonCheckbox" hidden>
-        <input type="checkbox" id="typeButtonCheckbox"checked>
+      <button type="button"  class="type" onclick="toggleFilter('typeHide','uniteButtonCheckbox')" >
+        Type de mesure 
+      <input type="checkbox" id="uniteButtonCheckbox" name="unite_checkbox" checked>
       </button>
 
       <span id="typeHide">
@@ -93,13 +93,13 @@
 
   <!-- TYPE DE PLATEFORME -->
   <div class="types">
-    
-    <button type="button" id="bouton_periode" class="type" onclick="toggleFilter('typePlatformeHide','typePlatformeButtonCheckbox')">Type de plateforme 
-      <input type="checkbox" id="typeButtonCheckbox" hidden>
-      <input type="checkbox" id="typeButtonCheckbox"checked>
+
+    <button type="button" id="bouton_periode" class="type" onclick="toggleFilter('PlatformeHide','PlateformeButtonCheckbox')">
+      Type de plateforme 
+      <input type="checkbox" id="PlateformeButtonCheckbox" name="plateforme_checkbox" checked>
     </button>
 
-    <span id="typePlatformeHide">
+    <span id="PlatformeHide">
       <div class="options">
       <label class="option">
         <input type="radio" name="platforme" value="BO">
@@ -253,18 +253,20 @@ const moisNoms = [
   "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
 ];
 
-function toggleFilter(filterID,checkboxId){
+function toggleFilter(filterID,checkboxID){
 
 targetFilter = document.getElementById(filterID)
-targetCheckbox = document.getElementById(checkboxId)
+targetCheckbox = document.getElementById(checkboxID)
 
 if(targetFilter.getAttribute("hidden")){
   targetFilter.removeAttribute("hidden")
   targetCheckbox.removeAttribute("hidden")
+  targetCheckbox.removeAttribute("disabled")
 }
 else{
-  targetFilter.setAttribute("hidden","")
-  targetCheckbox.setAttribute("hidden","")
+  targetFilter.setAttribute("hidden","TRUE")
+  targetCheckbox.setAttribute("hidden","TRUE")
+  targetCheckbox.setAttribute("disabled","TRUE")
 }
 
 
