@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+
 <!-- HEADER -->
 <header class="header">
   <div class="left">
@@ -34,6 +34,7 @@
   </div>
 </header>
 
+<body>
 <!-- SECTION ACCUEIL -->
 <section class="hero">
   <div class="overlay"></div>

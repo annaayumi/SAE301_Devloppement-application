@@ -366,26 +366,6 @@ body {
 /* responsive */
 @media (max-width: 768px) {
 
-  /* menu */
-  .burger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    margin-left: 20px;
-  }
-
-  .burger span {
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-  }
-
-  .burger {
-    z-index: 3000;
-  }
-
   .nav {
     position: fixed;
     top: 80px;

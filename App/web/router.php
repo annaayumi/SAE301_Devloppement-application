@@ -18,7 +18,7 @@
     $mois = $_GET['mois'] ?? "";
     $unite = $_GET['unite'] ?? ""; 
     $plateforme = $_GET['platforme'] ?? "";
-    $date_checkbox = $GET['date_checkbox'] ?? "FALSE";
+    $date_checkbox = $_GET['date_checkbox'] ?? "TRUE";
 
 
     $date = "";

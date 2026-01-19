@@ -10,13 +10,16 @@
 </head>
 
 <body onload="onloadShowDate()">
-<!-- HEADER -->
-<header class="header">
-  <div class="left">
-    <a href="router.php?action=UsePage_carte&lang=English">
-    🌐 <span>EN</span>
-    </a>
-  </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="left">
+      <!-- logo ici -->
+    </div>
+    <div class="lang">
+      <a href="router.php?action=UsePage_carte&lang=English">
+      🌐 <span>EN</span>
+      </a>
+    </div>
 
   <nav class="nav">
     <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
@@ -57,21 +60,35 @@
     </span>
   </div>
 
-    <!-- unite DE MESURE -->
+    <!-- UNITE DE MESURE -->
     
     <div class="types">
       
-    <button type="button"  class="type " onclick="toggleFilter('typeHide','typeButtonCheckbox','')">Type de mesure 
-      <input type="checkbox" id="typeButtonCheckbox" hidden>
-      <input type="checkbox" id="typeButtonCheckbox"checked>
-    </button>
-    <span id="typeHide">
-      <div class="options">
-        <input type="radio" class="option" name="unite" value="PSAL">Salinité</input>
-        <input type="radio" class="option" name="unite" value="CHLT">Chlorophylle A</input>
-        <input type="radio" class="option" name="unite" value="TEMP">Température</input>
-    </span>
-      </div>
+      <button type="button"  class="type " onclick="toggleFilter('typeHide','typeButtonCheckbox','')">Type de mesure 
+        <input type="checkbox" id="typeButtonCheckbox" hidden>
+        <input type="checkbox" id="typeButtonCheckbox"checked>
+      </button>
+
+      <span id="typeHide">
+        <div class="options">
+
+          <label class="option">
+            <input type="radio" name="unite" value="PSAL">
+            <span>Salinité</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="unite" value="CHLT">
+            <span>Chlorophylle A</span>
+          </label>
+
+          <label class="option">
+            <input type="radio" name="unite" value="TEMP">
+            <span>Température</span>
+          </label>
+
+        </div>
+      </span>
     </div>
 
   <!-- TYPE DE PLATEFORME -->
@@ -84,24 +101,75 @@
 
     <span id="typePlatformeHide">
       <div class="options">
-        <input class="option" name="platforme" value="BO" type="radio">Boreholes/ Bottom Landers (BO)</input>
-        <input class="option" name="platforme" value="CT" type="radio">CTD Profiles (CT)</input>
-        <input class="option" name="platforme" value="DB" type="radio">Drifting Buoys (DB)</input>
-        <input class="option" name="platforme" value="FB" type="radio">FerryBoxes (FB)</input>
-        <input class="option" name="platforme" value="GL" type="radio">Gliders (GL)</input>
-        <input class="option" name="platforme" value="ML" type="radio">Mini-Loggers (ML)</input>
-        <input class="option" name="platforme" value="MO" type="radio">Fixed Mooring / Moored Buoys (MO)</input>
-        <input class="option" name="platforme" value="PF" type="radio">Profiling Floats (PF)</input>
-        <input class="option" name="platforme" value="PR" type="radio">Profiling Floats - Alternative code (PR)</input>
-        <input class="option" name="platforme" value="SD" type="radio">Saildrones / Surface Drifters (SD)</input>
-        <input class="option" name="platforme" value="TG" type="radio">Tide Gauges (TG)</input>
-        <input class="option" name="platforme" value="TS" type="radio">ThermoSalinographs (TS)</input>  
-        <input class="option" name="platforme" value="XB" type="radio">Expendable Bathythermographs (XB)</input>
-      </div>
-    </span>
-    
-    <input  type="submit" value="Appliquer"></input>
+      <label class="option">
+        <input type="radio" name="platforme" value="BO">
+        <span>Boreholes / Bottom Landers (BO)</span>
+      </label>
 
+      <label class="option">
+        <input type="radio" name="platforme" value="CT">
+        <span>CTD Profiles (CT)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="DB">
+        <span>Drifting Buoys (DB)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="FB">
+        <span>FerryBoxes (FB)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="GL">
+        <span>Gliders (GL)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="ML">
+        <span>Mini-Loggers (ML)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="MO">
+        <span>Fixed Mooring / Moored Buoys (MO)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="PF">
+        <span>Profiling Floats (PF)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="PR">
+        <span>Profiling Floats – Alternative code (PR)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="SD">
+        <span>Saildrones / Surface Drifters (SD)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="TG">
+        <span>Tide Gauges (TG)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="TS">
+        <span>ThermoSalinographs (TS)</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="platforme" value="XB">
+        <span>Expendable Bathythermographs (XB)</span>
+      </label>
+
+    </div>
+  </span>
+    
+    <input  type="submit" value="Appliquer">
 
     <input type="hidden" name="action" value="UsePage_carte">
     <input type="hidden" name="lang" value="Francais">
@@ -126,6 +194,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+
+var myIconClass = L.Icon.extend({
+    options: {
+        iconSize:     [40, 40],
+        iconAnchor:   [22, 94],
+        popupAnchor:  [-3, -76]
+    }
+});
+
+var icon = new myIconClass ({
+    iconUrl: '../assets/img/map-pin.png'
+});
+
 </script>
 
 <!-- marqueur -->
@@ -143,8 +224,8 @@ foreach  ($dataSet as $obj) {
   if ($obj->getUnite() == "CHLT"){
     $tempUnite = "mg/m<sup>-3</sup>";
   }
-  
-  echo "L.marker([".$obj->getLatitude().",".$obj->getLongitude()."])
+
+  echo "L.marker([".$obj->getLatitude().",".$obj->getLongitude()."], {icon: icon})
   .bindPopup(`<strong>Valeur :</strong> ".$obj->getValeur()." ". $tempUnite."<br>
   <strong>Date :</strong> ".$obj->getDate()."<br>
   <strong>Id plateforme :</strong>". $obj->getIdPlateforme()."<br>
