@@ -61,7 +61,14 @@ new Chart(document.getElementById('chart'), {
   maintainAspectRatio: false,
   interaction: { mode: 'index', intersect: false },
   plugins: {
-    legend: { position: 'bottom' }
+    legend: {
+    position: 'bottom',
+    labels: {
+      color: '#eaf3f6', 
+      boxWidth: 14,
+      boxHeight: 14
+    }
+  }
   },
   scales: {
     x: {
@@ -69,11 +76,27 @@ new Chart(document.getElementById('chart'), {
       ticks: {
         autoSkip: false,
         maxRotation: 90,
-        minRotation: 90
+        minRotation: 90,
+        color: '#ffffff'
+      },
+      grid: {
+        color: 'rgba(255, 255, 255, 0.29)'
+      },
+      border: {
+        color: '#ffffff'
       }
     },
     y: {
-      beginAtZero: true
+      beginAtZero: true,
+      ticks: {
+        color: '#eaf3f6'
+      },
+      grid: {
+        color: 'rgba(255, 255, 255, 0.29)'
+      },
+      border: {
+        color: '#ffffff'
+      }
     }
   }
 }
