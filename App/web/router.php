@@ -36,7 +36,8 @@
     if(isset($_GET['plateforme_checkbox'])){
         $plateforme = $_GET['platforme'] ?? "";
     }
-    
+
+
 
     // page carte avec filtres
     if ((isset($unite) or isset($date) or isset($plateforme)) and $action == 'UsePage_carte'){
@@ -106,6 +107,7 @@
         if($lang == "Francais"){Controller::UsePage('missions_fr.php');}
         if($lang == "English"){Controller::UsePage('missions_en.php');}
     }
+
 
     /*
         // Use page Graphique
