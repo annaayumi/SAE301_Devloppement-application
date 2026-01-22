@@ -13,7 +13,7 @@
 <!-- HEADER -->
 <header class="header">
   <div class="left">
-    <!-- logo ici -->
+    <img src="../assets/img/logo.svg" alt="Logo GL'EAUBAL" class="logo">
   </div>
   <div class="lang">
     <a href="router.php?action=UsePage_index&lang=English">
@@ -21,8 +21,6 @@
     </a>
   </div>
 
-
-<div class="glass-header">
   <nav class="glass-nav">
     <ul class="glass-menu">
       <li class="active">
@@ -51,7 +49,7 @@
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <h1>BIENVENUE SUR <span class="site_nom">GLEAUBAL</span></h1>
+    <h1>BIENVENUE SUR <span class="site_nom">GL'EAUBAL</span></h1>
 
     <p>
       Le changement climatique est un des enjeux majeurs que nous vivons aujourd’hui
@@ -193,7 +191,7 @@
 </footer>
 
 <div class="copyright">
-  © Gleaubal 2025-2026 Tous droits réservés | Mentions légales
+  © Gl'eaubal 2025-2026 Tous droits réservés | Mentions légales
 </div>
 
 <!-- animations javascript pour les cartes info -->

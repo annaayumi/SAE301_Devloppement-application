@@ -36,16 +36,6 @@
     }
     }
   
-
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_GET['action'] ?? '') === 'submitAvis') {
-        Controller::submitAvis();
-        header("Location: router.php?action=UsePage_contact&lang=Francais");
-        exit;
-    }
-
-
-
-
     // page carte avec filtres
     if ($unite != "" or $date != "" or $plateforme != ""){
 

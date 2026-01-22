@@ -22,7 +22,6 @@
       </a>
     </div>
 
-<div class="glass-header">
   <nav class="glass-nav">
     <ul class="glass-menu">
       <li>

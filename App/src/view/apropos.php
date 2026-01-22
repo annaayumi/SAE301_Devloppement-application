@@ -21,7 +21,6 @@
       </a>
     </div>
 
-<div class="glass-header">
   <nav class="glass-nav">
     <ul class="glass-menu">
       <li>
@@ -122,7 +121,7 @@
 </footer>
 
 <div class="copyright">
-  © Gleaubal 2025-2026 Tous droits réservés | Mentions légales
+  © Gl'eaubal 2025-2026 Tous droits réservés | Mentions légales
 </div>
 
 </body>

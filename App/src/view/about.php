@@ -27,12 +27,6 @@
     <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
     <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
-
-  <div class="burger" id="burger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
 </header>
 
 <!-- CONTENU -->
@@ -112,7 +106,7 @@
 </footer>
 
 <div class="copyright">
-  © Gleaubal 2025-2026 All rights reserved | Legal mentions
+  © Gl'eaubal 2025-2026 All rights reserved | Legal mentions
 </div>
 
 </body>

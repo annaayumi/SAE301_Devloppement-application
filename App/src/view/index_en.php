@@ -28,12 +28,6 @@
     <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
   </nav>
 
-  <div class="burger" id="burger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
 </header>
 
 
@@ -42,7 +36,7 @@
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <h1>WELCOME TO <span class="site_nom">GLEAUBAL</span></h1>
+    <h1>WELCOME TO <span class="site_nom">GL'EAUBAL</span></h1>
 
     <p>
       Climate change is one of the major challenges we face today,
@@ -186,7 +180,7 @@
 </footer>
 
 <div class="copyright">
-  © Gleaubal 2025-2026 All rights reserved | Legal mentions
+  © Gl'eaubal 2025-2026 All rights reserved | Legal mentions
 </div>
 
 <!-- animations javascript -->

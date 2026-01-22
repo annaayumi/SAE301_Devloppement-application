@@ -34,6 +34,24 @@ body {
   flex: 1;
 }
 
+/* LOGO */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.lang {
+  position : relative;
+  z-index : 2000;
+}
+
 .lang a:link, .lang a:visited, .lang a:active {
   color: white;
   text-decoration: none;
@@ -43,19 +61,25 @@ body {
   color: rgba(255, 255, 255, 0.853);
 }
 
-/* ===== GLASS NAV ===== */
 
-.glass-header {
+.header {
   position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 90px;
+  padding: 0 40px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
 }
 
 .glass-nav {
-  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .glass-menu {

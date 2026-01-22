@@ -134,7 +134,7 @@
 </footer>
 
 <div class="copyright">
-  © Gleaubal 2025-2026 All rights reserved | Legal mentions
+  © Gl'eaubal 2025-2026 All rights reserved | Legal mentions
 </div>
 
 </body>
