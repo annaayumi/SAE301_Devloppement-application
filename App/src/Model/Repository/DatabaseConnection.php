@@ -115,8 +115,6 @@ class DatabaseConnection {
 
         $sql = $sql.";";
 
-        echo $sql;
-
         // prep sql
         $PdoStatement = DatabaseConnection::getPdo()->prepare($sql);
         

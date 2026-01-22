@@ -8,7 +8,6 @@
 
     use App\Gleaubal\Model\Repository\DatabaseConnection;
 
-    print_r($_GET);
 
     $action = $_GET['action'] ?? 'UsePage_index';
     $lang = $_GET['lang'] ?? 'Francais';
