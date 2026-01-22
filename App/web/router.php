@@ -103,27 +103,26 @@
     }
 
 
-    
         // Use page Graphique
     if ($action == 'UsePage_graphique') {
-        $idplateforme = $_GET['idPlateforme'] ?? '';
+        $idPlateforme = $_GET['idPlateforme'] ?? '';
 
-        if ($idplateforme == '') {
+        if ($idPlateforme == '') {
             die("Paramètre idPlateforme manquant.");
         }
 
-        $series = DatabaseConnection::doQuery_avg_by_year_for_platform($idplateforme);
+        $series = DatabaseConnection::doQuery_avg_by_year_for_platform($idPlateforme);
 
         if ($lang == "Francais") {
             Controller::UsePage('graphique.php', [
-                'idPlateforme' => $idplateforme,
+                'idPlateforme' => $idPlateforme,
                 'series' => $series
             ]);
         }
 
         if ($lang == "English") {
             Controller::UsePage('graph.php', [
-                'idPlateforme' => $idplateforme,
+                'idPlateforme' => $idPlateforme,
                 'series' => $series
             ]);
         }

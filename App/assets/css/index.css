@@ -1,134 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Open Sans", sans-serif;
   background: black;
-  color: white;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; 
-  height: 80px;
-  display: flex;
-  align-items: center;
-  padding: 0 40px;
-  z-index: 1000;
-}
-
-.hero-content {
-  padding: 160px 40px 0;
-}
-
-.left {
-  flex: 1;
-}
-
-/* LOGO */
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 90px;
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.lang {
-  position : relative;
-  z-index : 2000;
-}
-
-.lang a:link, .lang a:visited, .lang a:active {
-  color: white;
-  text-decoration: none;
-}
-
-.lang a:hover {
-  color: rgba(255, 255, 255, 0.853);
-}
-
-
-.header {
-  position: fixed;
-  top: 20px;
-  left: 0;
-  right: 0;
-  height: 90px;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  z-index: 1000;
-}
-
-.glass-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.glass-menu {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
-  padding: 14px 30px;
-  border-radius: 40px;
-
-  background: rgba(20, 20, 20, 0.45);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.glass-menu li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 30px;
-  transition: 0.3s ease;
-}
-
-.glass-menu li i {
-  color: #3fc9c0;
-}
-
-.glass-menu li a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-}
-
-.glass-menu li:hover {
-  background: rgba(63, 201, 192, 0.25);
-  box-shadow: 0 0 15px rgba(63, 201, 192, 0.4);
-}
-
-/* ACTIVE */
-.glass-menu li.active {
-  background: linear-gradient(135deg, #3fc9c0, #1c6f6b);
-  box-shadow: 0 0 18px rgba(63, 201, 192, 0.6);
-}
-
-.glass-menu li.active a,
-.glass-menu li.active i {
-  color: #fff;
 }
 
 .hero {
@@ -332,66 +203,6 @@ body {
   transform: translateX(4px);
 }
 
-
-.footer {
-  background: #274242;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1.3fr 1.3fr;
-  gap: 50px;
-  padding: 40px 80px;
-  font-size: 14px;
-  color: white;
-}
-
-.footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-.footer a:hover {
-  opacity: 0.8;
-}
-
-.footer-col {
-  line-height: 1.6;
-}
-
-.footer strong {
-  display: inline-block;
-  margin-bottom: 8px;
-  text-decoration: underline;
-}
-
-/* GitHub */
-.footer-github {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.footer-github a {
-  color: white;
-}
-
-.footer-github svg {
-  flex-shrink: 0;
-  margin-top: 4px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.footer-github a:hover svg {
-  opacity: 0.8;
-}
-
-/* COPYRIGHT */
-.copyright {
-  background: #7f8f8f;
-  text-align: center;
-  padding: 12px;
-  font-size: 13px;
-  color: white;
-}
-
 /* Animation apparition accueil */
 .hero-content {
   opacity: 0;
@@ -406,33 +217,86 @@ body {
   }
 }
 
-
-/* responsive */
 @media (max-width: 768px) {
 
-  .nav {
-    position: fixed;
-    top: 80px;
-    right: 0;
-    width: 220px;
-    height: calc(100vh - 80px);
-    background: rgba(0,0,0,0.97);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 20px;
-    gap: 25px;
-
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+  .hero-content {
+    padding: 120px 16px 60px;
+    max-width: 100%;
+    text-align: center;
   }
 
-  .nav.active {
-    transform: translateX(0);
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.2;
   }
 
-  .footer {
+  .hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .boutonScroll {
+    position: relative;
+    margin: 30px auto 0;
+    left: auto;
+    bottom: auto;
+    transform: none;
+
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .impact {
+    padding: 80px 16px;
+  }
+
+  .impact h2 {
+    font-size: 26px;
+    margin-bottom: 50px;
+  }
+
+  .stats {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
+  .stat .donnees {
+    font-size: 42px;
+  }
+
+  .themes {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .carte {
+    padding: 24px;
+  }
+
+  .carte h3 {
+    font-size: 18px;
+  }
+
+  .carte p {
+    font-size: 14px;
+  }
+
+  .downloads {
+    padding: 80px 16px;
+  }
+
+  .downloads h2 {
+    font-size: 26px;
+    margin-bottom: 50px;
+  }
+
+  .downloads-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .download-card {
+    padding: 24px;
+  }
 }

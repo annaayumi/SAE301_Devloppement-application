@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Accueil</title>
+  <meta charset="UTF-8">
+  <title>Accueil</title>
 
-<link rel="stylesheet" href="../assets/css/index.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../assets/js/menu_burger.js"></script>
 </head>
 
 <body>
+
 <!-- HEADER -->
 <header class="header">
   <div class="left">
     <img src="../assets/img/logo.svg" alt="Logo GL'EAUBAL" class="logo">
   </div>
+
   <div class="lang">
     <a href="router.php?action=UsePage_index&lang=English">
-    🌐 <span>EN</span>
+      🌐 <span>EN</span>
     </a>
   </div>
+  
+  <button class="burger" aria-label="Menu">
+    ☰
+  </button>
 
   <nav class="glass-nav">
     <ul class="glass-menu">
@@ -49,7 +58,9 @@
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <h1>BIENVENUE SUR <span class="site_nom">GL'EAUBAL</span></h1>
+    <h1>
+      BIENVENUE SUR <span class="site_nom">GL'EAUBAL</span>
+    </h1>
 
     <p>
       Le changement climatique est un des enjeux majeurs que nous vivons aujourd’hui
@@ -233,9 +244,6 @@ document.addEventListener("DOMContentLoaded", () => {
   checkScroll(); // au cas où déjà visible
 });
 </script>
-
-
-
 
 </body>
 </html>
