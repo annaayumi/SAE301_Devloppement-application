@@ -9,39 +9,34 @@
     use App\Gleaubal\Model\Repository\DatabaseConnection;
 
 
-
     $action = $_GET['action'] ?? 'UsePage_index';
     $lang = $_GET['lang'] ?? 'Francais';
 
-    // filtres carte
-    $annee = $_GET['annee'] ?? "";
-    $mois = $_GET['mois'] ?? "";
-    $unite = $_GET['unite'] ?? ""; 
-    $plateforme = $_GET['platforme'] ?? "";
-    $date_checkbox = $_GET['date_checkbox'] ?? "TRUE";
+    // verify checkbox toggle (filtres carte)
 
 
-    $date = "";
+    if(isset($_GET['date_checkbox'])){
+        
+        $date = "";
+        $annee = $_GET['annee'] ?? "";
+        $mois = $_GET['mois'] ?? "";
 
-    if($date_checkbox == "FALSE"){
-
+        // annee + mois concat
+        if ((int)$mois < 10 and $mois != ""){
+            $mois = "0".$mois;
+            $date = $annee."-".$mois;
+        }
     }
-    else{
 
-    // annee + mois concat
+    isset($_GET['unite_checkbox'])? $unite = $_GET['unite']: NULL;
+    isset($_GET['plateforme_checkbox'])? $plateforme = $_GET['plateforme']: NULL;
 
-    if ((int)$mois < 10 and $mois != ""){
-        $mois = "0".$mois;
-        $date = $annee."-".$mois;
-    }
-    }
-  
     // page carte avec filtres
-    if ($unite != "" or $date != "" or $plateforme != ""){
+    if ((isset($unite) or isset($date) or isset($plateforme)) and $action == 'UsePage_carte'){
 
+        $dataSet = DatabaseConnection::doQuery_with_filters($date ?? "",$unite ?? [],$plateforme ?? []);
 
-        $dataSet = DatabaseConnection::doQuery_with_filters($date,$unite,$plateforme);
-
+        //var_dump($dataSet);
         if($lang == "Francais"){Controller::UsePage('carte.php',['dataSet' => $dataSet]);}
         if($lang == "English"){Controller::UsePage('map.php',['dataSet' => $dataSet]);}
         
@@ -79,34 +74,12 @@
             if($lang == "English"){Controller::UsePage('contact_en.php');}
         }
 
-
-        // Use page Carte
-
-
-        /*
-        if ($filtre != NULL ){
-            // faire requete sql
-        }
-
-        $values = [
-            'latitude' => 0.5,
-            'longitude' => 0.5,
-            'valeur' => 9, 
-            'unite' => 9, 
-            'date' => 9, 
-            'id_plateforme' => 9,
-            'unite' => 9,
-            'desc' => 9
-        ];*/
-
         
         if($action == 'UsePage_carte'){
             if($lang == "Francais"){Controller::UsePage('carte.php');}
             if($lang == "English"){Controller::UsePage('map.php');}
 
         }
-
-
 
         // Use page donnees
 
@@ -129,30 +102,32 @@
         if($lang == "English"){Controller::UsePage('missions_en.php');}
     }
 
+
+    /*
         // Use page Graphique
     if ($action == 'UsePage_graphique') {
-        $idPlateforme = $_GET['idPlateforme'] ?? '';
+        $idplateforme = $_GET['idplateforme'] ?? '';
 
-        if ($idPlateforme == '') {
-            die("Paramètre idPlateforme manquant.");
+        if ($idplateforme == '') {
+            die("Paramètre idplateforme manquant.");
         }
 
-        $series = DatabaseConnection::doQuery_avg_by_year_for_platform($idPlateforme);
+        $series = DatabaseConnection::doQuery_avg_by_year_for_platform($idplateforme);
 
         if ($lang == "Francais") {
             Controller::UsePage('graphique.php', [
-                'idPlateforme' => $idPlateforme,
+                'idplateforme' => $idplateforme,
                 'series' => $series
             ]);
         }
 
         if ($lang == "English") {
             Controller::UsePage('graph.php', [
-                'idPlateforme' => $idPlateforme,
+                'idplateforme' => $idplateforme,
                 'series' => $series
             ]);
         }
-    }
+    }*/
 
 }
 ?>
