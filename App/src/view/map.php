@@ -187,7 +187,7 @@
       <input type="hidden" name="action" value="UsePage_carte">
       <input type="hidden" name="lang" value="English">
 
-
+    </div>
     </form>
   </aside>
 

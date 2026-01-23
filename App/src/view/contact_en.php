@@ -78,7 +78,7 @@
     <input id="submit_input" type="submit" value="Envoyer" style="border-bottom: 0px;">
 
     <input type="hidden" name="action" value="UsePage_contact">
-    <input type="hidden" name="lang" value="Francais">
+    <input type="hidden" name="lang" value="English">
   </form>
   <?php
 

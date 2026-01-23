@@ -43,7 +43,6 @@
       </li>
     </ul>
   </nav>
-</div>
 </header>
 
 <a href="router.php?action=UsePage_apropos&lang=Francais" class="bouton-retour">
@@ -85,13 +84,8 @@
         Plateforme ouverte de partage de données scientifiques marines.
       </p>
     </div>
-
-  </div>
-
 </section>
 
-
-</section>
 <footer class="footer">
 
   <!-- lien github -->
