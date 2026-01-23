@@ -43,7 +43,6 @@
       </li>
     </ul>
   </nav>
-</div>
 </header>
 
 <a href="router.php?action=UsePage_apropos&lang=Francais" class="bouton-retour">
@@ -87,8 +86,6 @@
     </div>
 </section>
 
-
-</section>
 <footer class="footer">
 
   <!-- lien github -->

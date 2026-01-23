@@ -2,7 +2,6 @@ body {
   background: black;
 }
 
-/* Intro */
 .intro {
   max-width: 900px;
   margin: 0 auto 120px;
@@ -87,7 +86,6 @@ main.missions {
   color: #eaeaea;
 }
 
-/* icône */
 .competences li::before {
   content: "";
   position: absolute;

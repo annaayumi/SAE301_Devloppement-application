@@ -76,8 +76,19 @@
 
     <button type="submit">Send</button>
 
-    <input type="hidden" name="action" value="submitAvis">
+    <!-- submit -->
+    <input id="submit_input" type="submit" name="submit_avis" value="Envoyer">
+
+    <input type="hidden" name="action" value="UsePage_contact">
+    <input type="hidden" name="lang" value="Francais">
   </form>
+  
+  <?php
+
+    if (isset($_POST['submit_avis'])) {
+      echo "Votre avis à bien été soumis.";
+    }
+  ?>
 </section>
 
 

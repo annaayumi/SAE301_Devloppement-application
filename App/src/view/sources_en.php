@@ -87,8 +87,6 @@
     </div>
 </section>
 
-
-</section>
 <footer class="footer">
 
   <!-- lien github -->
