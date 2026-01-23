@@ -9,8 +9,8 @@
     use App\Gleaubal\Model\Repository\DatabaseConnection;
 
 
-    $action = $_GET['action'] ?? 'UsePage_index';
-    $lang = $_GET['lang'] ?? 'Francais';
+    $action = $_GET['action'] ?? $_POST['action'] ??'UsePage_index';
+    $lang = $_GET['lang'] ?? $_POST['lang'] ??'Francais';
 
 
     // Use page Index
@@ -37,26 +37,19 @@
 
     // Use page Contact
 
-    if($action == 'UsePage_contact' and isset($_GET['pseudo'])){
+    if($action == 'UsePage_contact'){
 
-        if(isset($_GET['pseudo'])){
-            $pseudo = $_GET['pseudo'];
-            $commentaire = $_GET['commentaire'];
-            $note = $_GET['note'];
 
-            DatabaseConnection::insertAvis($pseudo,$commentaire,$note);
+        if(isset($_POST['pseudo'])){
+            $pseudo = $_POST['pseudo'];
+            $commentaire = $_POST['commentaire'];
+            $note = $_POST['note'];
 
-            
+            DatabaseConnection::insertAvis($pseudo,$commentaire,$note);            
         }
-
-        if($lang == "Francais"){Controller::UsePage('index_fr.php');}
-        if($lang == "English"){Controller::UsePage('index_en.php');}
-    }
-    else{
         $liste_avis = DatabaseConnection::getAvis();
         if($lang == "Francais"){Controller::UsePage('contact_fr.php',['liste_avis' => $liste_avis]);}
         if($lang == "English"){Controller::UsePage('contact_en.php',['liste_avis' => $liste_avis]);}
-
     }
 
  
@@ -90,7 +83,6 @@
         }
 
 
-        //var_dump($dataSet);
         if($lang == "Francais"){Controller::UsePage('carte.php',['dataSet' => $dataSet ?? NULL]);}
         if($lang == "English"){Controller::UsePage('map.php',['dataSet' => $dataSet ?? NULL]);}
             
