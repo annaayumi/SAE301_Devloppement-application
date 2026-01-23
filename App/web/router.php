@@ -15,32 +15,12 @@
     $lang = $_GET['lang'] ?? $_POST['lang'] ??'Francais';
 
 
-    // Use page Index
-
-    if($action == 'UsePage_index'){
-        if($lang == "Francais"){Controller::UsePage('index_fr.php');}
-        if($lang == "English"){Controller::UsePage('index_en.php');}
-    }
-
-    // Use page A propos    
-
-    if($action == 'UsePage_apropos'){
-        if($lang == "Francais"){Controller::UsePage('apropos.php');}
-        if($lang == "English"){Controller::UsePage('about.php');}
-    }
-
-    // Use page Contenu A propos
-
-    if($action == 'UsePage_phenomenes'){
-        if($lang == "Francais"){Controller::UsePage('phenomenes.php');}
-        if($lang == "English"){Controller::UsePage('phenomenon.php');}
-    }
 
 
     // Use page Contact
 
     if($action == 'UsePage_contact'){
-
+        $found = true;
 
         if(isset($_POST['pseudo'])){
             $pseudo = $_POST['pseudo'];
@@ -54,13 +34,10 @@
         if($lang == "English"){Controller::UsePage('contact_en.php',['liste_avis' => $liste_avis]);}
     }
 
- 
-
-
 
     // Use page carte
     if ($action == 'UsePage_carte'){
-        
+        $found = true;
         if(isset($_GET['date_checkbox'])){
         
             $date = "";
@@ -127,22 +104,6 @@
             if($lang == "English"){Controller::UsePage('missions_en.php');}
         }
 
-
-    // Use page Contact
-
-        if($action == 'UsePage_contact'){
-            $found = true;
-            if($lang == "Francais"){Controller::UsePage('contact_fr.php');}
-            if($lang == "English"){Controller::UsePage('contact_en.php');}
-        }
-
-        
-        if($action == 'UsePage_carte'){
-            $found = true;
-            if($lang == "Francais"){Controller::UsePage('carte.php');}
-            if($lang == "English"){Controller::UsePage('map.php');}
-
-        }
 
     // Use page donnees
 
