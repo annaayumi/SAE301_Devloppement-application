@@ -53,7 +53,7 @@
 <section class="avis">
   <h2>Donner votre avis</h2>
 
-  <form method="post" class="avis-form">
+  <form method="get" class="avis-form">
     
     <input type="text" name="pseudo" placeholder="Votre pseudo" required>
 
@@ -61,27 +61,52 @@
 
     <!-- étoiles -->
     <div class="stars">
-      <input type="radio" id="star5" name="note" value="5" required>
-      <label for="star5">★</label>
-
-      <input type="radio" id="star4" name="note" value="4">
-      <label for="star4">★</label>
-
-      <input type="radio" id="star3" name="note" value="3">
-      <label for="star3">★</label>
+      <input type="radio" id="star1" name="note" value="1" required>
+      <label for="star1">★</label>
 
       <input type="radio" id="star2" name="note" value="2">
       <label for="star2">★</label>
 
-      <input type="radio" id="star1" name="note" value="1">
-      <label for="star1">★</label>
+      <input type="radio" id="star3" name="note" value="3">
+      <label for="star3">★</label>
+
+      <input type="radio" id="star4" name="note" value="4">
+      <label for="star4">★</label>
+
+      <input type="radio" id="star5" name="note" value="5">
+      <label for="star5">★</label>
     </div>
+    <!-- submit -->
+    <input id="submit_input" type="submit" value="Envoyer" style="border-bottom: 0px;">
+    
 
-    <button type="submit">Envoyer</button>
-
-    <input type="hidden" name="action" value="submitAvis">
+    <input type="hidden" name="action" value="UsePage_contact">
+    <input type="hidden" name="lang" value="Francais">
   </form>
+  <?php
+    if(isset($_GET['pseudo'])){
+      echo "Votre avis à bien été soumis.";
+    }
+  ?>
 </section>
+
+<aside>
+  <?php
+    foreach  ($dataSet ?? [] as $obj) {
+      echo "<b>".$obj->getPseudo()."</b>";
+      echo "<p>".$obj->getCreated_at()."</p>";
+
+      $star_counter = "";
+      foreach($obj->getNote() as $k){
+        $star_counter = $star_counter."★";
+      }
+
+      echo "<p> Note : ".$star_counter."</p>";
+
+      echo "<p>".$obj->getCommentaire()."</p>";
+    }
+  ?>
+</aside>
 
 
 <footer class="footer">

@@ -12,85 +12,91 @@
     $action = $_GET['action'] ?? 'UsePage_index';
     $lang = $_GET['lang'] ?? 'Francais';
 
-    // verify checkbox toggle (filtres carte)
+
+    // Use page Index
+
+    if($action == 'UsePage_index'){
+        if($lang == "Francais"){Controller::UsePage('index_fr.php');}
+        if($lang == "English"){Controller::UsePage('index_en.php');}
+    }
+
+    // Use page A propos    
+
+    if($action == 'UsePage_apropos'){
+        if($lang == "Francais"){Controller::UsePage('apropos.php');}
+        if($lang == "English"){Controller::UsePage('about.php');}
+    }
+
+    // Use page Contenu A propos
+
+    if($action == 'UsePage_phenomenes'){
+        if($lang == "Francais"){Controller::UsePage('phenomenes.php');}
+        if($lang == "English"){Controller::UsePage('phenomenon.php');}
+    }
 
 
-    if(isset($_GET['date_checkbox'])){
-        
-        $date = "";
-        $annee = $_GET['annee'] ?? "";
-        $mois = $_GET['mois'] ?? "";
+    // Use page Contact
 
-        // annee + mois concat
-        if ((int)$mois < 10 and $mois != ""){
-            $mois = "0".$mois;
-            $date = $annee."-".$mois;
+    if($action == 'UsePage_contact'){
+
+        if(isset($_GET['pseudo'])){
+            $pseudo = $_GET['pseudo'];
+            $commentaire = $_GET['commentaire'];
+            $note = $_GET['note'];
+
+            DatabaseConnection::insertAvis($pseudo,$commentaire,$note);
+
+            $liste_avis = DatabaseConnection::getAvis();
         }
+
+        if($lang == "Francais"){Controller::UsePage('contact_fr.php',$liste_avis ?? []);}
+        if($lang == "English"){Controller::UsePage('contact_en.php',$liste_avis ?? []);}
     }
 
-    if(isset($_GET['unite_checkbox'])){
-        $unite = $_GET['unite'];
-    }
-    if(isset($_GET['plateforme_checkbox'])){
-        $plateforme = $_GET['plateforme'];
-    }
+ 
 
-    // page carte avec filtres
-    if ((isset($unite) or isset($date) or isset($plateforme)) and $action == 'UsePage_carte'){
 
-        $dataSet = DatabaseConnection::doQuery_with_filters($date ?? "",$unite ?? [],$plateforme ?? []);
+
+    // Use page carte
+    if ($action == 'UsePage_carte'){
+        
+        if(isset($_GET['date_checkbox'])){
+        
+            $date = "";
+            $annee = $_GET['annee'] ?? "";
+            $mois = $_GET['mois'] ?? "";
+
+            // annee + mois concat
+            if ((int)$mois < 10 and $mois != ""){
+                $mois = "0".$mois;
+                $date = $annee."-".$mois;
+            }
+        }
+
+        if(isset($_GET['unite_checkbox'])){
+            $unite = $_GET['unite'];
+        }
+        if(isset($_GET['plateforme_checkbox'])){
+            $plateforme = $_GET['plateforme'];
+        }
+        if(isset($_GET['unite']) or isset($_GET['date']) or isset($_GET['plateforme'])){
+            $dataSet = DatabaseConnection::doQuery_with_filters($date ?? "",$unite ?? [],$plateforme ?? []);
+        }
+
 
         //var_dump($dataSet);
-        if($lang == "Francais"){Controller::UsePage('carte.php',['dataSet' => $dataSet]);}
-        if($lang == "English"){Controller::UsePage('map.php',['dataSet' => $dataSet]);}
-        
+        if($lang == "Francais"){Controller::UsePage('carte.php',['dataSet' => $dataSet ?? NULL]);}
+        if($lang == "English"){Controller::UsePage('map.php',['dataSet' => $dataSet ?? NULL]);}
+            
     }
-    else{
-        
 
-
-        // Use page Index
-
-        if($action == 'UsePage_index'){
-            if($lang == "Francais"){Controller::UsePage('index_fr.php');}
-            if($lang == "English"){Controller::UsePage('index_en.php');}
-        }
-
-        // Use page A propos    
-
-        if($action == 'UsePage_apropos'){
-            if($lang == "Francais"){Controller::UsePage('apropos.php');}
-            if($lang == "English"){Controller::UsePage('about.php');}
-        }
-
-        // Use page Contenu A propos
-
-        if($action == 'UsePage_phenomenes'){
-            if($lang == "Francais"){Controller::UsePage('phenomenes.php');}
-            if($lang == "English"){Controller::UsePage('phenomenon.php');}
-        }
-
-
-        // Use page Contact
-
-        if($action == 'UsePage_contact'){
-            if($lang == "Francais"){Controller::UsePage('contact_fr.php');}
-            if($lang == "English"){Controller::UsePage('contact_en.php');}
-        }
-
-        
-        if($action == 'UsePage_carte'){
-            if($lang == "Francais"){Controller::UsePage('carte.php');}
-            if($lang == "English"){Controller::UsePage('map.php');}
-
-        }
-
-        // Use page donnees
+    // Use page donnees
 
     if($action == 'UsePage_donnees'){
         if($lang == "Francais"){Controller::UsePage('donnees.php');}
         if($lang == "English"){Controller::UsePage('data.php');}
     }
+    
 
     // Use page Sources de données & formats proposés  
 
@@ -107,7 +113,7 @@
     }
 
 
-        // Use page Graphique
+    // Use page Graphique
     if ($action == 'UsePage_graphique') {
         $idPlateforme = $_GET['idPlateforme'] ?? '';
 
@@ -132,5 +138,4 @@
         }
     }
 
-}
 ?>
