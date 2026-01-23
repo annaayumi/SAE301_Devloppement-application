@@ -5,20 +5,18 @@
   <title>Carte</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="stylesheet" href="../assets/css/carte.css">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../assets/js/menu_burger.js"></script>
+  <script src="../assets/js/fonction_carte.js" ></script>
 </head>
 
 <body onload="NoResetForm()">
     <!-- HEADER -->
     <header class="header">
-      <div class="left">
-        <!-- logo ici -->
-      </div>
       <div class="lang">
         <a href="router.php?action=UsePage_carte&lang=English">
         🌐 <span>EN</span>
@@ -49,7 +47,6 @@
       </li>
     </ul>
   </nav>
-</div>
 </header>
 
   <div id="map"></div>
@@ -196,8 +193,6 @@
 
   <!-- Import leaflet -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-
   <!-- CARTE -->
   <script>
   
@@ -210,8 +205,8 @@
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
   }).addTo(map);
-
   </script>
+
 
   <!-- marqueur -->
   <?php
@@ -242,11 +237,9 @@
     `).addTo(map);";
   }
   echo "</script>"
-
   ?>
 
 
-  <script src="../assets/js/fonction_carte.js" ></script>
   <script>
       function NoResetForm(){
 

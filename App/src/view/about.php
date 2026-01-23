@@ -15,9 +15,6 @@
 <body>
 <!-- HEADER -->
 <header class="header">
-  <div class="left">
-    <!-- logo ici -->
-  </div>
   <div class="lang">
     <a href="router.php?action=UsePage_apropos&lang=Francais">
     🌐 <span>FR</span>
@@ -28,11 +25,25 @@
     ☰
   </button>
 
-  <nav class="nav">
-    <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
-    <a href="router.php?action=UsePage_carte&lang=English">Map</a>
-    <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
-    <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
+  <nav class="glass-nav">
+    <ul class="glass-menu">
+      <li class="active">
+        <i class="fa fa-home"></i>
+        <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
+      </li>
+      <li>
+        <i class="fa fa-map"></i>
+        <a href="router.php?action=UsePage_carte&lang=English">Map</a>
+      </li>
+      <li>
+        <i class="fa fa-info-circle"></i>
+        <a href="router.php?action=UsePage_apropos&lang=English" class="active">About</a>
+      </li>
+      <li>
+        <i class="fa fa-envelope"></i>
+        <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
+      </li>
+    </ul>
   </nav>
 </header>
 

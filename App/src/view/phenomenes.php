@@ -15,9 +15,6 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="left">
-      <!-- logo ici -->
-    </div>
     <div class="lang">
       <a href="router.php?action=UsePage_phenomenes&lang=English">
       🌐 <span>EN</span>
@@ -48,7 +45,6 @@
       </li>
     </ul>
   </nav>
-</div>
 </header>
 
 <a href="router.php?action=UsePage_apropos&lang=Francais" class="bouton-retour">

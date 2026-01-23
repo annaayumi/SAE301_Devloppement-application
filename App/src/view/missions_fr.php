@@ -15,9 +15,6 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="left">
-      <!-- logo ici -->
-    </div>
     <div class="lang">
       <a href="router.php?action=UsePage_missions&lang=English">
       🌐 <span>EN</span>
@@ -61,33 +58,22 @@
     <p>
       GLEAUBAL est un projet pédagogique visant à rendre les données climatiques marines
       accessibles, compréhensibles et utiles pour tous.
+
+      Le site est accessible à tous et est destiné à ceux qui souhaitent consulter les données 
+      par simple curiosité et aux utilisateurs avancés dans le domaine comme les scientifiques 
+      et les chercheurs qui souhaitent télécharger ces données pour faire des études sur celles-ci 
+      et/ou travailler avec ce support pour divers projets.
     </p>
   
     <div class="section">
-      <h3>Sensibiliser</h3>
+      <h3>Développer des compétences à travers cette SAE</h3>
       <p>
-        Montrer concrètement les effets du changement climatique sur les océans à travers
-        des visualisations simples et interactives.
+        Réaliser un développement d'application, Optimiser des applications,
+        Administrer des systèmes informatiques communicants complexes,
+        Gérer des données de l'information, Conduire un projet, 
+        Collaborer au sein d'une équipe informatique.
       </p>
     </div>
-
-    <div class="section">
-      <h3>Comprendre les données</h3>
-      <p>
-        Rendre lisibles des données scientifiques complexes issues de plateformes ouvertes
-        et fiables.
-      </p>
-    </div>
-
-    <div class="section">
-      <h3>Apprendre par la pratique</h3>
-      <p>
-        Développer nos compétences en développement web, en traitement de données
-        et en travail collaboratif.
-      </p>
-    </div>
-
-  </section>
 
 </main>
 

@@ -8,6 +8,8 @@
 
     use App\Gleaubal\Model\Repository\DatabaseConnection;
 
+    $found = false;
+
 
     $action = $_GET['action'] ?? $_POST['action'] ??'UsePage_index';
     $lang = $_GET['lang'] ?? $_POST['lang'] ??'Francais';
@@ -81,38 +83,80 @@
         if(isset($_GET['unite']) or isset($_GET['date']) or isset($_GET['plateforme'])){
             $dataSet = DatabaseConnection::doQuery_with_filters($date ?? "",$unite ?? [],$plateforme ?? []);
         }
-
-
-        if($lang == "Francais"){Controller::UsePage('carte.php',['dataSet' => $dataSet ?? NULL]);}
-        if($lang == "English"){Controller::UsePage('map.php',['dataSet' => $dataSet ?? NULL]);}
-            
     }
+    
+
+
+    // Use page Index
+
+        if($action == 'UsePage_index'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('index_fr.php');}
+            if($lang == "English"){Controller::UsePage('index_en.php');}
+        }
+
+    // Use page A propos    
+
+        if($action == 'UsePage_apropos'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('apropos.php');}
+            if($lang == "English"){Controller::UsePage('about.php');}
+        }
+
+    // Use page Contenu A propos
+
+        if($action == 'UsePage_phenomenes'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('phenomenes.php');}
+            if($lang == "English"){Controller::UsePage('phenomenon.php');}
+        }
+
+        // Use page Sources de données & formats proposés  
+
+        if($action == 'UsePage_sources'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('sources_fr.php');}
+            if($lang == "English"){Controller::UsePage('sources_en.php');}
+        }
+
+        // Use page Missions du projet 
+        
+        if($action == 'UsePage_missions'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('missions_fr.php');}
+            if($lang == "English"){Controller::UsePage('missions_en.php');}
+        }
+
+
+    // Use page Contact
+
+        if($action == 'UsePage_contact'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('contact_fr.php');}
+            if($lang == "English"){Controller::UsePage('contact_en.php');}
+        }
+
+        
+        if($action == 'UsePage_carte'){
+            $found = true;
+            if($lang == "Francais"){Controller::UsePage('carte.php');}
+            if($lang == "English"){Controller::UsePage('map.php');}
+
+        }
 
     // Use page donnees
 
     if($action == 'UsePage_donnees'){
+        $found = true;
         if($lang == "Francais"){Controller::UsePage('donnees.php');}
         if($lang == "English"){Controller::UsePage('data.php');}
     }
     
 
-    // Use page Sources de données & formats proposés  
-
-    if($action == 'UsePage_sources'){
-        if($lang == "Francais"){Controller::UsePage('sources_fr.php');}
-        if($lang == "English"){Controller::UsePage('sources_en.php');}
-    }
-
-    // Use page Missions du projet 
-    
-    if($action == 'UsePage_missions'){
-        if($lang == "Francais"){Controller::UsePage('missions_fr.php');}
-        if($lang == "English"){Controller::UsePage('missions_en.php');}
-    }
-
 
     // Use page Graphique
     if ($action == 'UsePage_graphique') {
+        $found = true;
         $idPlateforme = $_GET['idPlateforme'] ?? '';
 
         if ($idPlateforme == '') {
@@ -136,4 +180,14 @@
         }
     }
 
+    if ($found == false) {
+        http_response_code(404);
+
+        if ($lang == "Francais") {
+                if($lang == "Francais"){Controller::UsePage('error.php');}
+
+        exit;
+        }
+
+    }
 ?>
