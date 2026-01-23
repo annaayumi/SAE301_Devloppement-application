@@ -15,9 +15,6 @@
 <body>
 <!-- HEADER -->
 <header class="header">
-  <div class="left">
-    <!-- logo ici -->
-  </div>
   <div class="lang">
     <a href="router.php?action=UsePage_contact&lang=Francais">
     🌐 <span>FR</span>
@@ -28,40 +25,61 @@
     ☰
   </button>
 
-  <nav class="nav">
-    <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
-    <a href="router.php?action=UsePage_carte&lang=English">Map</a>
-    <a href="router.php?action=UsePage_apropos&lang=English">About</a>
-    <a href="router.php?action=UsePage_contact&lang=English" class="active">Contact</a>
+  <nav class="glass-nav">
+    <ul class="glass-menu">
+      <li>
+        <i class="fa fa-home"></i>
+        <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
+      </li>
+      <li>
+        <i class="fa fa-map"></i>
+        <a href="router.php?action=UsePage_carte&lang=English">Map</a>
+      </li>
+      <li>
+        <i class="fa fa-info-circle"></i>
+        <a href="router.php?action=UsePage_apropos&lang=English">About</a>
+      </li>
+      <li class="active">
+        <i class="fa fa-envelope"></i>
+        <a href="router.php?action=UsePage_contact&lang=English">Contact</a>
+      </li>
+    </ul>
   </nav>
-
 </header>
 
-<main>
-  <form action="" method="post">
+<section class="avis">
+  <h2>Donner votre avis</h2>
 
-<div class="form-group">
-  <input type="text" id="prenom" name="prenom" required>
-  <label for="prenom">First name</label>
-</div>
+  <form method="post" class="avis-form">
+    
+    <input type="text" name="pseudo" placeholder="Your username" required>
 
-<div class="form-group">
-  <input type="tel" id="telephone" name="telephone" required>
-  <label for="telephone">Phone number</label>
-</div>
+    <textarea name="commentaire" placeholder="Your comment" required></textarea>
 
-<div class="form-group">
-  <input type="email" id="email" name="email" required>
-  <label for="email">Email</label>
-</div>
+    <!-- étoiles -->
+    <div class="stars">
+      <input type="radio" id="star1" name="note" value="1" required>
+      <label for="star1">★</label>
 
-<div class="form-group">
-  <textarea id="message" name="message" required></textarea>
-  <label for="message">Text</label>
-</div>
-  <button class="bouton_envoyer" type="submit">Send</button>
+      <input type="radio" id="star2" name="note" value="2">
+      <label for="star2">★</label>
+
+      <input type="radio" id="star3" name="note" value="3">
+      <label for="star3">★</label>
+
+      <input type="radio" id="star4" name="note" value="4">
+      <label for="star4">★</label>
+
+      <input type="radio" id="star5" name="note" value="5">
+      <label for="star5">★</label>
+    </div>
+
+    <button type="submit">Send</button>
+
+    <input type="hidden" name="action" value="submitAvis">
   </form>
-</main>
+</section>
+
 
 <footer class="footer">
   <!-- lien github -->

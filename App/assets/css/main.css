@@ -28,26 +28,10 @@ html, body {
   padding: 160px 40px 0;
 }
 
-.left {
-  flex: 1;
-}
-
-/* LOGO */
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 90px;
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
 .lang {
   position : relative;
   z-index : 2000;
+  left : 0;
 }
 
 .lang a:link, .lang a:visited, .lang a:active {
@@ -98,7 +82,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-radius: 30px;
   transition: 0.3s ease;
 }
@@ -219,10 +203,6 @@ html, body {
 
   .header {
     padding: 0 16px;
-  }
-
-  .logo {
-    height: 36px;
   }
 
   .lang {

@@ -16,10 +16,6 @@
 
 <!-- HEADER -->
 <header class="header">
-  <div class="left">
-    <img src="../assets/img/logo.svg" alt="Logo GL'EAUBAL" class="logo">
-  </div>
-
   <div class="lang">
     <a href="router.php?action=UsePage_index&lang=English">
       🌐 <span>EN</span>

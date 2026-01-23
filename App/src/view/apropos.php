@@ -15,9 +15,6 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="left">
-      <!-- logo ici -->
-    </div>
     <div class="lang">
       <a href="router.php?action=UsePage_apropos&lang=English">
       🌐 <span>EN</span>

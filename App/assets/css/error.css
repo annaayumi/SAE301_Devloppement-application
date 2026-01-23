@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #070b2d;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+h1 {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 42px;
+  text-align: center;
+  z-index: 10;
+}
+
+.mini_jeu {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+}
+
+.score_game {
+  font-size: 20px;
+}
+
+#timer {
+  margin-bottom: 8px;
+}
+
+/* zone de jeu */
+#game {
+  position: fixed;
+  inset: 0;
+}
+
+/* lemmings */
+.lemming {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-image: url("../img/lemming.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* écran de fin */
+#end {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#end.active {
+  display: flex;
+}
+
+.end-box {
+  text-align: center;
+}
+
+.end-score {
+  font-size: 96px;
+  margin-bottom: 20px;
+}
+
+.end-message {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.bouton_retour {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #3fc9c0;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}

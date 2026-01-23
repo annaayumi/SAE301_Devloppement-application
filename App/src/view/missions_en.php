@@ -2,20 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Sources</title>
+  <title>Nos missions</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/sources.css">
+
+  <link rel="stylesheet" href="../assets/css/missions.css">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../assets/js/menu_burger.js"></script>
 </head>
 
 <body>
   <!-- HEADER -->
   <header class="header">
     <div class="lang">
-      <a href="router.php?action=UsePage_sources&lang=English">
-      🌐 <span>EN</span>
+      <a href="router.php?action=UsePage_missions&lang=Francais">
+      🌐 <span>FR</span>
       </a>
     </div>
 
@@ -27,15 +29,15 @@
     <ul class="glass-menu">
       <li>
         <i class="fa fa-home"></i>
-        <a href="router.php?action=UsePage_index&lang=Francais">Accueil</a>
+        <a href="router.php?action=UsePage_index&lang=Francais">Welcome</a>
       </li>
       <li>
         <i class="fa fa-map"></i>
-        <a href="router.php?action=UsePage_carte&lang=Francais">Carte</a>
+        <a href="router.php?action=UsePage_carte&lang=Francais">Map</a>
       </li>
       <li class="active">
         <i class="fa fa-info-circle"></i>
-        <a href="router.php?action=UsePage_apropos&lang=Francais">À propos</a>
+        <a href="router.php?action=UsePage_apropos&lang=Francais">About</a>
       </li>
       <li>
         <i class="fa fa-envelope"></i>
@@ -43,55 +45,39 @@
       </li>
     </ul>
   </nav>
-</div>
 </header>
 
 <a href="router.php?action=UsePage_apropos&lang=Francais" class="bouton-retour">
-  ← Retour
+  ← Back
 </a>
 
-<section class="sources">
+<main class="missions">
 
-  <h1>Sources de données scientifiques</h1>
-  <p class="intro">
-    Les données utilisées dans GLEAUBAL proviennent de différents organismes scientifiques reconnus.
-    Elles permettent d’analyser l’évolution des océans et les impacts du changement climatique.
-  </p>
+<!-- a mettre en anglais !-->
+  <section class="intro">
+    <h1>Nos missions</h1>
+    <p>
+      GLEAUBAL est un projet pédagogique visant à rendre les données climatiques marines
+      accessibles, compréhensibles et utiles pour tous.
 
-    <!-- Copernicus -->
-    <div class="source-card">
-      <h2>Copernicus</h2>
+      Le site est accessible à tous et est destiné à ceux qui souhaitent consulter les données 
+      par simple curiosité et aux utilisateurs avancés dans le domaine comme les scientifiques 
+      et les chercheurs qui souhaitent télécharger ces données pour faire des études sur celles-ci 
+      et/ou travailler avec ce support pour divers projets.
+    </p>
+  
+    <div class="section">
+      <h3>Développer des compétences à travers cette SAE</h3>
       <p>
-        Programme européen d’observation de la Terre par satellite.
-        Copernicus possède une vision sur le monde entier grâce à ses satellites.
+        Réaliser un développement d'application, Optimiser des applications,
+        Administrer des systèmes informatiques communicants complexes,
+        Gérer des données de l'information, Conduire un projet, 
+        Collaborer au sein d'une équipe informatique.
       </p>
     </div>
 
-    <!-- Ifremer -->
-    <div class="source-card">
-      <h2>Ifremer</h2>
-      <p>
-        Institut français spécialisé dans les sciences marines.
-        Ifremer possède une vision limitée car il s’étend principalement sur la France et les
-        outre-mer notamment avec ses océans et la biodiversité marine qui lui sont liés mais aussi une
-        implication à l’international en publiant à l’échelle mondiale.
-      </p>
-    </div>
+</main>
 
-    <!-- SeaNoe -->
-    <div class="source-card">
-      <h2>SeaNoe</h2>
-      <p>
-        Plateforme ouverte de partage de données scientifiques marines.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-</section>
 <footer class="footer">
 
   <!-- lien github -->
@@ -109,7 +95,7 @@
 
     <div>
       <strong>GitHub</strong><br>
-      Adresse : 122 Rue Paul Armangot,<br>
+      Address : 122 Rue Paul Armangot,<br>
       94400 Vitry-sur-Seine
     </div>
   </div>
@@ -124,7 +110,7 @@
 
   <!-- Membres -->
   <div class="footer-col">
-    <strong>Membres de l’équipe</strong><br>
+    <strong>Members of the team</strong><br>
     CHEREF Rayane<br>
     FALCONNET BANEYX Simon<br>
     MARDAUS Patrick<br>
@@ -145,7 +131,7 @@
 </footer>
 
 <div class="copyright">
-  © Gl'eaubal 2025-2026 Tous droits réservés | Mentions légales
+  © Gl'eaubal 2025-2026 All rights reserved | Legal mentions
 </div>
 
 </body>

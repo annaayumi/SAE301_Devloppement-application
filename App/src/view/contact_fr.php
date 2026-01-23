@@ -15,9 +15,6 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="left">
-      <!-- logo ici -->
-    </div>
     <div class="lang">
       <a href="router.php?action=UsePage_contact&lang=English">
       🌐 <span>EN</span>
@@ -61,20 +58,20 @@
 
     <!-- étoiles -->
     <div class="stars">
-      <input type="radio" id="star5" name="note" value="5" required>
-      <label for="star5">★</label>
-
-      <input type="radio" id="star4" name="note" value="4">
-      <label for="star4">★</label>
-
-      <input type="radio" id="star3" name="note" value="3">
-      <label for="star3">★</label>
+      <input type="radio" id="star1" name="note" value="1" required>
+      <label for="star1">★</label>
 
       <input type="radio" id="star2" name="note" value="2">
       <label for="star2">★</label>
 
-      <input type="radio" id="star1" name="note" value="1">
-      <label for="star1">★</label>
+      <input type="radio" id="star3" name="note" value="3">
+      <label for="star3">★</label>
+
+      <input type="radio" id="star4" name="note" value="4">
+      <label for="star4">★</label>
+
+      <input type="radio" id="star5" name="note" value="5">
+      <label for="star5">★</label>
     </div>
 
     <button type="submit">Envoyer</button>

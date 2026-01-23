@@ -15,9 +15,6 @@
 <body>
 <!-- HEADER -->
 <header class="header">
-  <div class="left">
-    <img src="../assets/img/logo.svg" alt="Logo GL'EAUBAL" class="logo">
-  </div>
   <div class="lang">
     <a href="router.php?action=UsePage_index&lang=Francais">
     🌐 <span>FR</span>
@@ -32,7 +29,7 @@
     <ul class="glass-menu">
       <li class="active">
         <i class="fa fa-home"></i>
-        <a href="router.php?action=UsePage_index&lang=English">Home</a>
+        <a href="router.php?action=UsePage_index&lang=English">Welcome</a>
       </li>
       <li>
         <i class="fa fa-map"></i>
@@ -49,7 +46,6 @@
     </ul>
   </nav>
 </header>
-
 
 <!-- SECTION ACCUEIL -->
 <section class="hero">
