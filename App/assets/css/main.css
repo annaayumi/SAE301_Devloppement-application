@@ -10,6 +10,7 @@ html, body {
   scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
   color: white;
+  overscroll-behavior: none ;
 }
 
 .header {
